@@ -1,21 +1,27 @@
 const fs = require('fs');
-let html = fs.readFileSync('y:/risklens/app/(app)/overview/page.tsx', 'utf8');
+let code = fs.readFileSync('y:/risklens/app/(app)/plan-vs-actual/page.tsx', 'utf8');
 
-const startStr = '<div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 pb-4">';
-const endStr = '</div>\n\n<div className="lg:col-span-4 rounded-xl bg-surface-container-low/80 backdrop-blur-xl p-4 flex flex-col justify-between shadow-xl">';
-
-const startIndex = html.indexOf(startStr);
-const endIndex = html.indexOf(endStr);
+const startStr = '{/*  Chart Legend  */}';
+const footerStr = '{/*  Variance Insight Bar Footer  */}';
+const startIndex = code.indexOf(startStr);
+const endIndex = code.indexOf(footerStr);
 
 if (startIndex !== -1 && endIndex !== -1) {
-  const newHtml = 'import { CashFlowChart } from "./CashFlowChart";\n' + 
-                  html.substring(0, startIndex) + 
-                  '<CashFlowChart />\n' + 
-                  html.substring(endIndex);
-  fs.writeFileSync('y:/risklens/app/(app)/overview/page.tsx', newHtml);
-  console.log('done');
-} else {
-  console.log('not found');
-  console.log('start', startIndex);
-  console.log('end', endIndex);
+  const componentImport = 'import { RevenuePerformanceChart } from "./RevenuePerformanceChart";\n';
+  
+  // The Chart Legend is inside `<div className="flex flex-col md:flex-row ...">` which ends before High-Contrast SVG.
+  // Wait, I need to make sure I don't leave unclosed divs.
+  // Let's just do a regex replace to be safe.
+  
+  // Let's find exactly what tags wrap `startIndex` and `endIndex`
+  // Actually, wait, there are two closing divs at the end of the High-Contrast SVG section!
+  // It looks like:
+  // </div> (closes the Sep 2026 actual bar)
+  // </div> (closes the flex-col group)
+  // </div> (closes the grid grid-cols-6)
+  // </div> (closes the relative w-full)
+  
+  // Let's print out lines around endIndex to see what to delete
+  const lines = code.substring(startIndex, endIndex).split('\n');
+  console.log(lines.slice(-10));
 }
