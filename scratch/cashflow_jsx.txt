@@ -1,0 +1,693 @@
+<!-- Header Section with Quick Stats Ribbon -->
+<div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4">
+<div className="flex flex-col gap-1.5">
+<div className="flex items-center gap-2">
+<span className="font-label-caps text-label-caps text-tertiary uppercase tracking-wider">Liquidity Diagnostics</span>
+<span className="w-1 h-1 rounded-full bg-outline"></span>
+<span className="font-label-caps text-label-caps text-on-surface-variant font-medium">Aarav Packaging · Mumbai Hub</span>
+</div>
+<h1 className="font-headline-xl text-headline-xl text-on-surface font-semibold tracking-tight">Cash Flow Intelligence</h1>
+<p className="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+          See how money is moving through your business — not just how much you have.
+        </p>
+</div>
+<!-- Quick stats pill strip -->
+<div className="flex flex-wrap items-center gap-2 p-1.5 bg-surface-container-lowest/80 rounded-xl shadow-md">
+<div className="flex items-center gap-1.5 px-2 py-1 rounded-lg bg-surface-container-low/90">
+<span className="w-2 h-2 rounded-full bg-semantic-success shadow-[0_0_8px_#10B981]"></span>
+<span className="font-label-caps text-label-caps text-on-surface-variant">Data coverage:</span>
+<span className="font-label-metric-md text-label-metric-md text-semantic-success">96%</span>
+</div>
+<div className="flex items-center gap-1.5 px-2 py-1 rounded-lg bg-surface-container-low/90">
+<span className="material-symbols-outlined text-[15px] text-tertiary">history</span>
+<span className="font-label-caps text-label-caps text-on-surface-variant">Tx:</span>
+<span className="font-label-metric-md text-label-metric-md text-on-surface">Today, 14:15 IST</span>
+</div>
+<div className="flex items-center gap-1.5 px-2 py-1 rounded-lg bg-surface-container-low/90">
+<span className="material-symbols-outlined text-[15px] text-secondary">account_balance</span>
+<span className="font-body-sm text-body-sm text-on-surface">3 Accounts</span>
+</div>
+<div className="flex items-center gap-1.5 px-2 py-1 rounded-lg bg-tertiary-container/20 text-tertiary font-label-caps text-label-caps">
+<span className="inline-block w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+          Real-time Sync
+        </div>
+</div>
+</div>
+<!-- TOP KPIS ROW: 6 Metric Cards -->
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-5">
+<!-- KPI 1 -->
+<div className="p-4 rounded-xl bg-surface-container-low/70 shadow-md flex flex-col justify-between hover:bg-surface-container transition-all group">
+<div className="flex items-center justify-between text-outline text-[12px]">
+<span className="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant">Avg Monthly Inflow</span>
+<span className="material-symbols-outlined text-[16px] text-semantic-success group-hover:scale-110 transition-transform">south_west</span>
+</div>
+<div className="my-2 flex flex-col">
+<span className="font-label-metric-lg text-label-metric-lg text-on-surface font-semibold tracking-tight">₹13.45L</span>
+<span className="font-body-sm text-body-sm text-outline">Operating run-rate</span>
+</div>
+<div className="flex items-center gap-1.5 text-semantic-success font-label-caps text-label-caps">
+<span className="px-1.5 py-0.5 rounded bg-semantic-success/15 font-label-metric-md text-label-metric-md text-[11px]">+8.2%</span>
+<span className="text-on-surface-variant text-[11px]">vs last Qtr</span>
+</div>
+</div>
+<!-- KPI 2 -->
+<div className="p-4 rounded-xl bg-surface-container-low/70 shadow-md flex flex-col justify-between hover:bg-surface-container transition-all group">
+<div className="flex items-center justify-between text-outline text-[12px]">
+<span className="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant">Avg Monthly Outflow</span>
+<span className="material-symbols-outlined text-[16px] text-tertiary group-hover:scale-110 transition-transform">north_east</span>
+</div>
+<div className="my-2 flex flex-col">
+<span className="font-label-metric-lg text-label-metric-lg text-on-surface font-semibold tracking-tight">₹10.92L</span>
+<span className="font-body-sm text-body-sm text-outline">Direct &amp; SG&amp;A disbursements</span>
+</div>
+<div className="flex items-center gap-1.5 text-secondary font-label-caps text-label-caps">
+<span className="px-1.5 py-0.5 rounded bg-secondary-container/30 font-label-metric-md text-label-metric-md text-[11px]">+3.1%</span>
+<span className="text-on-surface-variant text-[11px]">vs last Qtr</span>
+</div>
+</div>
+<!-- KPI 3 -->
+<div className="p-4 rounded-xl bg-surface-container-low/70 shadow-md flex flex-col justify-between hover:bg-surface-container transition-all group relative overflow-hidden">
+<div className="absolute -right-4 -bottom-4 w-20 h-20 bg-semantic-success/10 rounded-full blur-xl pointer-events-none"></div>
+<div className="flex items-center justify-between text-outline text-[12px]">
+<span className="font-label-caps text-label-caps uppercase tracking-wider text-semantic-success">Net Cash Flow</span>
+<span className="material-symbols-outlined text-[16px] text-semantic-success">trending_up</span>
+</div>
+<div className="my-2 flex flex-col">
+<span className="font-label-metric-lg text-label-metric-lg text-semantic-success font-semibold tracking-tight">+₹2.53L</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">Retained surplus buffer</span>
+</div>
+<div className="flex items-center gap-1 text-semantic-success font-body-sm text-body-sm text-[11px]">
+<span className="inline-block w-1.5 h-1.5 rounded-full bg-semantic-success"></span>
+          Profitable operating run-rate
+        </div>
+</div>
+<!-- KPI 4 -->
+<div className="p-4 rounded-xl bg-surface-container-low/70 shadow-md flex flex-col justify-between hover:bg-surface-container transition-all group">
+<div className="flex items-center justify-between text-outline text-[12px]">
+<span className="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant">Cash-Flow Volatility</span>
+<span className="material-symbols-outlined text-[16px] text-tertiary">analytics</span>
+</div>
+<div className="my-2 flex flex-col">
+<span className="font-label-metric-lg text-label-metric-lg text-tertiary font-semibold tracking-tight">11.4%</span>
+<span className="font-body-sm text-body-sm text-outline">Coefficient of variation</span>
+</div>
+<div className="flex items-center gap-1 text-on-surface-variant font-label-caps text-label-caps text-[11px]">
+<span className="px-1.5 py-0.5 rounded bg-surface-container-high text-tertiary">Low-to-mod</span>
+<span>variance index</span>
+</div>
+</div>
+<!-- KPI 5 -->
+<div className="p-4 rounded-xl bg-surface-container-low/70 shadow-md flex flex-col justify-between hover:bg-surface-container transition-all group">
+<div className="flex items-center justify-between text-outline text-[12px]">
+<span className="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant">Minimum Balance</span>
+<span className="material-symbols-outlined text-[16px] text-semantic-warning">warning</span>
+</div>
+<div className="my-2 flex flex-col">
+<span className="font-label-metric-lg text-label-metric-lg text-on-surface font-semibold tracking-tight">₹4.15L</span>
+<span className="font-body-sm text-body-sm text-outline">Lowest trough dip</span>
+</div>
+<div className="text-semantic-warning font-label-caps text-label-caps text-[11px] flex items-center gap-1">
+<span>Recorded 14th Aug post-payroll</span>
+</div>
+</div>
+<!-- KPI 6 -->
+<div className="p-4 rounded-xl bg-surface-container-low/70 shadow-md flex flex-col justify-between hover:bg-surface-container transition-all group relative overflow-hidden">
+<div className="absolute -right-4 -bottom-4 w-20 h-20 bg-accent-electric/10 rounded-full blur-xl pointer-events-none"></div>
+<div className="flex items-center justify-between text-outline text-[12px]">
+<span className="font-label-caps text-label-caps uppercase tracking-wider text-accent-electric">Cash Buffer Days</span>
+<span className="material-symbols-outlined text-[16px] text-accent-electric">shield_with_heart</span>
+</div>
+<div className="my-2 flex flex-col">
+<span className="font-label-metric-lg text-label-metric-lg text-on-surface font-semibold tracking-tight">24 Days</span>
+<span className="font-body-sm text-body-sm text-outline">Burn runway at 0 inflow</span>
+</div>
+<div className="flex items-center gap-1 text-semantic-success font-label-caps text-label-caps text-[11px]">
+<span className="w-1.5 h-1.5 rounded-full bg-semantic-success"></span>
+          Safe liquidity window (&gt;15d)
+        </div>
+</div>
+</div>
+<!-- MAIN VISUALIZATION: Cash Flow Trend & Operating Flow Rhythm -->
+<div className="p-6 rounded-xl bg-surface-container-lowest shadow-xl flex flex-col gap-4 relative overflow-hidden">
+<!-- Ambient aura -->
+<div className="absolute top-0 right-1/4 w-96 h-48 bg-primary-container/10 blur-3xl pointer-events-none"></div>
+<div className="absolute bottom-0 left-1/3 w-80 h-36 bg-tertiary-container/10 blur-3xl pointer-events-none"></div>
+<!-- Chart Header & Interactive Controls -->
+<div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 z-10">
+<div className="flex flex-col gap-1">
+<div className="flex items-center gap-2">
+<span className="material-symbols-outlined text-tertiary text-[22px]">ssid_chart</span>
+<h2 className="font-headline-md text-headline-md text-on-surface font-semibold">Cash Flow Trend &amp; Rhythm</h2>
+</div>
+<p className="font-body-sm text-body-sm text-on-surface-variant">
+            Cross-account aggregate daily inflows, outflows, and net liquid capital position
+          </p>
+</div>
+<div className="flex flex-wrap items-center gap-4">
+<!-- Toggle metric series chips -->
+<div className="flex items-center gap-1 bg-surface-container-low p-1 rounded-xl">
+<button className="px-2.5 py-1 rounded-lg text-semantic-success bg-surface-container text-[12px] font-label-caps flex items-center gap-1.5 shadow-sm">
+<span className="w-2 h-2 rounded-full bg-semantic-success"></span>
+              Inflows
+            </button>
+<button className="px-2.5 py-1 rounded-lg text-rose-300 hover:text-on-surface text-[12px] font-label-caps flex items-center gap-1.5">
+<span className="w-2 h-2 rounded-full bg-semantic-critical"></span>
+              Outflows
+            </button>
+<button className="px-2.5 py-1 rounded-lg text-accent-electric bg-surface-container-high text-[12px] font-label-caps flex items-center gap-1.5 shadow-sm">
+<span className="w-2 h-2 rounded-full bg-accent-electric shadow-[0_0_6px_#38BDF8]"></span>
+              Net Curve
+            </button>
+<button className="px-2.5 py-1 rounded-lg text-outline-variant hover:text-on-surface text-[12px] font-label-caps flex items-center gap-1.5">
+<span className="w-2 h-0.5 bg-outline"></span>
+              Projection
+            </button>
+</div>
+<!-- Timeframe selector -->
+<div className="flex items-center bg-surface-container-low p-1 rounded-xl">
+<button className="px-3 py-1 rounded-lg text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps">30D</button>
+<button className="px-3 py-1 rounded-lg bg-primary-container text-on-primary-container font-label-caps text-label-caps shadow-sm font-semibold">90D</button>
+<button className="px-3 py-1 rounded-lg text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps">6M</button>
+<button className="px-3 py-1 rounded-lg text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps">12M</button>
+</div>
+</div>
+</div>
+<!-- Rich Interactive SVG Flow Canvas -->
+<div className="relative w-full h-80 sm:h-96 bg-surface-container/40 rounded-xl p-4 flex flex-col justify-between overflow-hidden">
+<!-- Y-Axis Grid labels background -->
+<div className="absolute inset-x-4 top-4 bottom-10 flex flex-col justify-between pointer-events-none opacity-40">
+<div className="flex items-center justify-between text-outline text-[11px] font-label-metric-md">
+<span>₹16.0L</span>
+<div className="w-full ml-3 border-b border-border-glass"></div>
+</div>
+<div className="flex items-center justify-between text-outline text-[11px] font-label-metric-md">
+<span>₹12.0L</span>
+<div className="w-full ml-3 border-b border-border-glass"></div>
+</div>
+<div className="flex items-center justify-between text-outline text-[11px] font-label-metric-md">
+<span>₹8.0L</span>
+<div className="w-full ml-3 border-b border-border-glass"></div>
+</div>
+<div className="flex items-center justify-between text-outline text-[11px] font-label-metric-md">
+<span>₹4.0L</span>
+<div className="w-full ml-3 border-b border-border-glass"></div>
+</div>
+<div className="flex items-center justify-between text-outline text-[11px] font-label-metric-md">
+<span>₹0.0L</span>
+<div className="w-full ml-3 border-b border-border-glass"></div>
+</div>
+</div>
+<!-- Simulated Tooltip Popup on Sep 20 spike -->
+<div className="absolute left-[64%] top-16 z-20 hidden md:flex flex-col gap-1 p-2 bg-surface-overlay/95 rounded-xl shadow-2xl backdrop-blur-md pointer-events-none">
+<div className="flex items-center justify-between gap-4 font-label-caps text-label-caps text-outline">
+<span>20 Sep 2026</span>
+<span className="text-semantic-success font-semibold">Positive Flow</span>
+</div>
+<div className="flex items-center justify-between gap-4">
+<span className="font-body-sm text-body-sm text-on-surface-variant">Inflow (Invoice #4029):</span>
+<span className="font-label-metric-md text-label-metric-md text-semantic-success">+₹3.85L</span>
+</div>
+<div className="flex items-center justify-between gap-4">
+<span className="font-body-sm text-body-sm text-on-surface-variant">Outflow (Resin vendor):</span>
+<span className="font-label-metric-md text-label-metric-md text-semantic-critical">-₹1.75L</span>
+</div>
+<div className="pt-1 mt-1 border-t border-border-glass flex items-center justify-between gap-4">
+<span className="font-body-sm text-body-sm font-semibold text-on-surface">Daily Net Delta:</span>
+<span className="font-label-metric-md text-label-metric-md font-semibold text-accent-electric">+₹2.10L</span>
+</div>
+</div>
+<!-- Inline SVG Visualization -->
+<div className="w-full h-full relative z-10">
+<svg className="w-full h-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1000 300">
+<defs>
+<linearGradient id="inflowBarGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stopColor="#10B981" stopOpacity="0.85"></stop>
+<stop offset="100%" stopColor="#10B981" stopOpacity="0.1"></stop>
+</linearGradient>
+<linearGradient id="outflowBarGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stopColor="#F43F5E" stopOpacity="0.75"></stop>
+<stop offset="100%" stopColor="#F43F5E" stopOpacity="0.05"></stop>
+</linearGradient>
+<linearGradient id="netGlowArea" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stopColor="#38BDF8" stopOpacity="0.28"></stop>
+<stop offset="100%" stopColor="#38BDF8" stopOpacity="0.0"></stop>
+</linearGradient>
+<filter height="140%" id="glow" width="140%" x="-20%" y="-20%">
+<feGaussianBlur result="blur" stdDeviation="4"></feGaussianBlur>
+<feComposite in="SourceGraphic" in2="blur" operator="over"></feComposite>
+</filter>
+</defs>
+<!-- Clustered Inflow & Outflow Daily Column Samples -->
+<!-- Day 1 -->
+<rect fill="url(#inflowBarGrad)" height="150" rx="3" width="10" x="50" y="110"></rect>
+<rect fill="url(#outflowBarGrad)" height="90" rx="3" width="10" x="63" y="170"></rect>
+<!-- Day 4 -->
+<rect fill="url(#inflowBarGrad)" height="180" rx="3" width="10" x="110" y="80"></rect>
+<rect fill="url(#outflowBarGrad)" height="110" rx="3" width="10" x="123" y="150"></rect>
+<!-- Day 7 -->
+<rect fill="url(#inflowBarGrad)" height="120" rx="3" width="10" x="170" y="140"></rect>
+<rect fill="url(#outflowBarGrad)" height="50" rx="3" width="10" x="183" y="210"></rect>
+<!-- Day 10 (Payroll trough window) -->
+<rect fill="url(#inflowBarGrad)" height="90" rx="3" width="10" x="230" y="170"></rect>
+<rect fill="url(#outflowBarGrad)" height="170" rx="3" width="10" x="243" y="90"></rect>
+<!-- Day 13 -->
+<rect fill="url(#inflowBarGrad)" height="140" rx="3" width="10" x="290" y="120"></rect>
+<rect fill="url(#outflowBarGrad)" height="100" rx="3" width="10" x="303" y="160"></rect>
+<!-- Day 16 -->
+<rect fill="url(#inflowBarGrad)" height="200" rx="3" width="10" x="350" y="60"></rect>
+<rect fill="url(#outflowBarGrad)" height="80" rx="3" width="10" x="363" y="180"></rect>
+<!-- Day 19 -->
+<rect fill="url(#inflowBarGrad)" height="165" rx="3" width="10" x="410" y="95"></rect>
+<rect fill="url(#outflowBarGrad)" height="120" rx="3" width="10" x="423" y="140"></rect>
+<!-- Day 22 -->
+<rect fill="url(#inflowBarGrad)" height="130" rx="3" width="10" x="470" y="130"></rect>
+<rect fill="url(#outflowBarGrad)" height="65" rx="3" width="10" x="483" y="195"></rect>
+<!-- Day 25 -->
+<rect fill="url(#inflowBarGrad)" height="190" rx="3" width="10" x="530" y="70"></rect>
+<rect fill="url(#outflowBarGrad)" height="120" rx="3" width="10" x="543" y="140"></rect>
+<!-- Day 28 -->
+<rect fill="url(#inflowBarGrad)" height="160" rx="3" width="10" x="590" y="100"></rect>
+<rect fill="url(#outflowBarGrad)" height="95" rx="3" width="10" x="603" y="165"></rect>
+<!-- Day 31 (Sample target tooltip spike Sep 20) -->
+<rect fill="url(#inflowBarGrad)" height="215" rx="3" width="10" x="650" y="45"></rect>
+<rect fill="url(#outflowBarGrad)" height="130" rx="3" width="10" x="663" y="130"></rect>
+<!-- Vertical scan indicator line -->
+<line opacity="0.8" stroke="#38BDF8" strokeDasharray="4 4" strokeWidth="1.5" x1="660" x2="660" y1="20" y2="260"></line>
+<circle cx="660" cy="85" fill="#38BDF8" r="5" stroke="#0A0D14" strokeWidth="2"></circle>
+<!-- Day 34 -->
+<rect fill="url(#inflowBarGrad)" height="175" rx="3" width="10" x="710" y="85"></rect>
+<rect fill="url(#outflowBarGrad)" height="110" rx="3" width="10" x="723" y="150"></rect>
+<!-- Day 37 -->
+<rect fill="url(#inflowBarGrad)" height="145" rx="3" width="10" x="770" y="115"></rect>
+<rect fill="url(#outflowBarGrad)" height="85" rx="3" width="10" x="783" y="175"></rect>
+<!-- Day 40 -->
+<rect fill="url(#inflowBarGrad)" height="195" rx="3" width="10" x="830" y="65"></rect>
+<rect fill="url(#outflowBarGrad)" height="120" rx="3" width="10" x="843" y="140"></rect>
+<!-- Day 43 -->
+<rect fill="url(#inflowBarGrad)" height="170" rx="3" width="10" x="890" y="90"></rect>
+<rect fill="url(#outflowBarGrad)" height="100" rx="3" width="10" x="903" y="160"></rect>
+<!-- Net Cash Position Dynamic Area & Spline Curve -->
+<path d="M 50 160 
+                     C 120 130, 180 180, 240 215 
+                     C 300 200, 360 120, 420 135 
+                     C 480 170, 540 100, 600 115 
+                     C 660 85, 720 125, 780 140 
+                     C 840 90, 900 110, 960 75 
+                     L 960 260 L 50 260 Z" fill="url(#netGlowArea)"></path>
+<path d="M 50 160 
+                     C 120 130, 180 180, 240 215 
+                     C 300 200, 360 120, 420 135 
+                     C 480 170, 540 100, 600 115 
+                     C 660 85, 720 125, 780 140 
+                     C 840 90, 900 110, 960 75" fill="none" filter="url(#glow)" stroke="#38BDF8" strokeWidth="3"></path>
+<!-- Predictive Forward Trajectory (dashed line) -->
+<path d="M 960 75 C 980 65, 990 60, 1000 58" fill="none" opacity="0.8" stroke="#8083ff" strokeDasharray="6 4" strokeWidth="2.5"></path>
+</svg>
+</div>
+<!-- X-Axis timeline labels -->
+<div className="w-full flex items-center justify-between text-outline text-[11px] font-label-caps pt-2 border-t border-border-glass">
+<span>01 Aug</span>
+<span>10 Aug</span>
+<span>20 Aug</span>
+<span>01 Sep</span>
+<span>10 Sep</span>
+<span className="text-accent-electric font-semibold">20 Sep (Spike)</span>
+<span>30 Sep (Today)</span>
+<span className="text-primary italic">Oct Run-rate</span>
+</div>
+</div>
+<!-- Flow rhythm insight footer -->
+<div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-2 rounded-xl bg-surface-container-low/80">
+<div className="flex items-center gap-2">
+<span className="material-symbols-outlined text-semantic-success text-[20px]">check_circle</span>
+<div className="flex items-center gap-2">
+<span className="font-body-md text-body-md font-medium text-on-surface">Flow rhythm:</span>
+<span className="font-body-md text-body-md text-on-surface-variant">Positive net inflow on <strong className="text-semantic-success font-label-metric-md text-label-metric-md">22 out of 30</strong> recorded operating days.</span>
+</div>
+</div>
+<div className="flex items-center gap-2 text-outline text-[12px]">
+<span className="font-label-caps text-label-caps uppercase">Collection Cycle:</span>
+<span className="font-label-metric-md text-label-metric-md text-on-surface font-semibold">33.2 Days</span>
+<span className="text-semantic-success font-label-caps text-label-caps">(-4.5d vs industry)</span>
+</div>
+</div>
+</div>
+<!-- SPLIT SECTION: Expense Decomposition & Business Operational Visual -->
+<div className="grid grid-cols-1 lg:grid-cols-12 gap-5">
+<!-- Expense Decomposition (8 cols) -->
+<div className="lg:col-span-8 p-6 rounded-xl bg-surface-container-lowest shadow-xl flex flex-col gap-4">
+<div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<span className="font-label-caps text-label-caps text-tertiary uppercase tracking-wider">Outflow Audit</span>
+<h3 className="font-headline-md text-headline-md text-on-surface font-semibold">Where Your Money Goes</h3>
+</div>
+<div className="flex items-center gap-2 px-2 py-1 rounded-lg bg-surface-container font-label-caps text-label-caps text-on-surface-variant">
+<span>Total Monthly Burn:</span>
+<span className="font-label-metric-md text-label-metric-md text-on-surface font-semibold">₹10.92L</span>
+</div>
+</div>
+<!-- Interactive Multi-segment Progress Bar -->
+<div className="w-full flex flex-col gap-2">
+<div className="w-full h-3 rounded-full bg-surface-container-high flex overflow-hidden p-0.5">
+<div className="h-full bg-indigo-500 rounded-l-full" style="width: 35.2%" title="Payroll: 35.2%"></div>
+<div className="h-full bg-cyan-400" style="width: 31.1%" title="Suppliers: 31.1%"></div>
+<div className="h-full bg-amber-400" style="width: 11.0%" title="Rent: 11.0%"></div>
+<div className="h-full bg-purple-400" style="width: 8.7%" title="Debt Service: 8.7%"></div>
+<div className="h-full bg-emerald-400" style="width: 6.2%" title="Utilities: 6.2%"></div>
+<div className="h-full bg-blue-400" style="width: 4.8%" title="Project: 4.8%"></div>
+<div className="h-full bg-rose-400 rounded-r-full" style="width: 3.0%" title="SG&amp;A: 3.0%"></div>
+</div>
+<div className="flex items-center justify-between text-outline text-[11px] font-label-caps">
+<span>Primary Weight: Payroll (35.2%)</span>
+<span>Secondary: Raw Material (31.1%)</span>
+<span>Fixed Overhead: 22.7%</span>
+</div>
+</div>
+<!-- Categorized Data Table / List -->
+<div className="flex flex-col gap-1 mt-1 overflow-x-auto">
+<!-- Category Row 1 -->
+<div className="grid grid-cols-12 items-center p-2 rounded-lg hover:bg-surface-container/60 transition-colors">
+<div className="col-span-5 flex items-center gap-3">
+<span className="w-2.5 h-2.5 rounded-full bg-indigo-500"></span>
+<div className="flex flex-col">
+<span className="font-body-md text-body-md font-medium text-on-surface">Payroll &amp; Wages</span>
+<span className="font-body-sm text-body-sm text-outline">28 employees, auto-reconciled via ICICI Epfo</span>
+</div>
+</div>
+<div className="col-span-3 text-right">
+<span className="font-label-metric-md text-label-metric-md text-on-surface font-semibold">₹3,85,000</span>
+</div>
+<div className="col-span-2 text-right">
+<span className="font-label-metric-md text-label-metric-md text-tertiary">35.2%</span>
+</div>
+<div className="col-span-2 text-right">
+<span className="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-caps text-label-caps text-[11px]">Stable</span>
+</div>
+</div>
+<!-- Category Row 2 -->
+<div className="grid grid-cols-12 items-center p-2 rounded-lg hover:bg-surface-container/60 transition-colors">
+<div className="col-span-5 flex items-center gap-3">
+<span className="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
+<div className="flex flex-col">
+<span className="font-body-md text-body-md font-medium text-on-surface">Suppliers &amp; Raw Material</span>
+<span className="font-body-sm text-body-sm text-outline">Corrugated board &amp; polymer resin vendors</span>
+</div>
+</div>
+<div className="col-span-3 text-right">
+<span className="font-label-metric-md text-label-metric-md text-on-surface font-semibold">₹3,40,000</span>
+</div>
+<div className="col-span-2 text-right">
+<span className="font-label-metric-md text-label-metric-md text-tertiary">31.1%</span>
+</div>
+<div className="col-span-2 text-right">
+<span className="px-2 py-0.5 rounded bg-semantic-warning/15 text-semantic-warning font-label-caps text-label-caps text-[11px]">Variable</span>
+</div>
+</div>
+<!-- Category Row 3 -->
+<div className="grid grid-cols-12 items-center p-2 rounded-lg hover:bg-surface-container/60 transition-colors">
+<div className="col-span-5 flex items-center gap-3">
+<span className="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+<div className="flex flex-col">
+<span className="font-body-md text-body-md font-medium text-on-surface">Rent &amp; Facilities</span>
+<span className="font-body-sm text-body-sm text-outline">Andheri MIDC industrial shed unit 4</span>
+</div>
+</div>
+<div className="col-span-3 text-right">
+<span className="font-label-metric-md text-label-metric-md text-on-surface font-semibold">₹1,20,000</span>
+</div>
+<div className="col-span-2 text-right">
+<span className="font-label-metric-md text-label-metric-md text-tertiary">11.0%</span>
+</div>
+<div className="col-span-2 text-right">
+<span className="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-caps text-label-caps text-[11px]">Fixed</span>
+</div>
+</div>
+<!-- Category Row 4 -->
+<div className="grid grid-cols-12 items-center p-2 rounded-lg hover:bg-surface-container/60 transition-colors">
+<div className="col-span-5 flex items-center gap-3">
+<span className="w-2.5 h-2.5 rounded-full bg-purple-400"></span>
+<div className="flex flex-col">
+<span className="font-body-md text-body-md font-medium text-on-surface">Debt Service (EMI &amp; Interest)</span>
+<span className="font-body-sm text-body-sm text-outline">Machinery term loan &amp; working capital line</span>
+</div>
+</div>
+<div className="col-span-3 text-right">
+<span className="font-label-metric-md text-label-metric-md text-on-surface font-semibold">₹95,000</span>
+</div>
+<div className="col-span-2 text-right">
+<span className="font-label-metric-md text-label-metric-md text-tertiary">8.7%</span>
+</div>
+<div className="col-span-2 text-right">
+<span className="px-2 py-0.5 rounded bg-semantic-success/15 text-semantic-success font-label-caps text-label-caps text-[11px]">Auto-debit</span>
+</div>
+</div>
+<!-- Category Row 5 -->
+<div className="grid grid-cols-12 items-center p-2 rounded-lg hover:bg-surface-container/60 transition-colors">
+<div className="col-span-5 flex items-center gap-3">
+<span className="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+<div className="flex flex-col">
+<span className="font-body-md text-body-md font-medium text-on-surface">Utilities &amp; Logistics</span>
+<span className="font-body-sm text-body-sm text-outline">Freight forwarders &amp; industrial power tariff</span>
+</div>
+</div>
+<div className="col-span-3 text-right">
+<span className="font-label-metric-md text-label-metric-md text-on-surface font-semibold">₹68,000</span>
+</div>
+<div className="col-span-2 text-right">
+<span className="font-label-metric-md text-label-metric-md text-tertiary">6.2%</span>
+</div>
+<div className="col-span-2 text-right">
+<span className="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-caps text-label-caps text-[11px]">Flexible</span>
+</div>
+</div>
+<!-- Category Row 6 -->
+<div className="grid grid-cols-12 items-center p-2 rounded-lg hover:bg-surface-container/60 transition-colors">
+<div className="col-span-5 flex items-center gap-3">
+<span className="w-2.5 h-2.5 rounded-full bg-blue-400"></span>
+<div className="flex flex-col">
+<span className="font-body-md text-body-md font-medium text-on-surface">Project &amp; Capex Spend</span>
+<span className="font-body-sm text-body-sm text-outline">Tooling automation phase 1 retrofit</span>
+</div>
+</div>
+<div className="col-span-3 text-right">
+<span className="font-label-metric-md text-label-metric-md text-on-surface font-semibold">₹52,000</span>
+</div>
+<div className="col-span-2 text-right">
+<span className="font-label-metric-md text-label-metric-md text-tertiary">4.8%</span>
+</div>
+<div className="col-span-2 text-right">
+<span className="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-caps text-label-caps text-[11px]">Milestone</span>
+</div>
+</div>
+<!-- Category Row 7 -->
+<div className="grid grid-cols-12 items-center p-2 rounded-lg hover:bg-surface-container/60 transition-colors">
+<div className="col-span-5 flex items-center gap-3">
+<span className="w-2.5 h-2.5 rounded-full bg-rose-400"></span>
+<div className="flex flex-col">
+<span className="font-body-md text-body-md font-medium text-on-surface">Other SG&amp;A / Statutory</span>
+<span className="font-body-sm text-body-sm text-outline">ERP licenses, commercial insurance &amp; fees</span>
+</div>
+</div>
+<div className="col-span-3 text-right">
+<span className="font-label-metric-md text-label-metric-md text-on-surface font-semibold">₹32,000</span>
+</div>
+<div className="col-span-2 text-right">
+<span className="font-label-metric-md text-label-metric-md text-tertiary">3.0%</span>
+</div>
+<div className="col-span-2 text-right">
+<span className="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-caps text-label-caps text-[11px]">Overhead</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Facility & Real-time Operations Context (4 cols) -->
+<div className="lg:col-span-4 flex flex-col gap-5">
+<!-- Visual Industrial Warehouse / Factory Floor Glass Context Card -->
+<div className="rounded-xl overflow-hidden bg-surface-container-lowest shadow-xl flex flex-col">
+<div className="relative h-44 w-full">
+<img />
+<div className="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/60 to-transparent"></div>
+<div className="absolute top-2 left-2 flex items-center gap-1.5 px-2 py-1 rounded-full bg-surface-container-lowest/80 backdrop-blur-md">
+<span className="w-2 h-2 rounded-full bg-semantic-success animate-ping"></span>
+<span className="font-label-caps text-label-caps text-on-surface">Facility Live · Andheri Unit</span>
+</div>
+</div>
+<div className="p-4 flex flex-col gap-2 -mt-2">
+<div className="flex items-center justify-between">
+<span className="font-headline-sm text-headline-sm text-on-surface font-semibold">Operational Anchor</span>
+<span className="font-label-metric-md text-label-metric-md text-tertiary text-[13px]">94.2% Capacity</span>
+</div>
+<p className="font-body-sm text-body-sm text-on-surface-variant">
+              High cash flow velocity is backed by active assembly line throughput with direct dispatch cycle time averaging under 48 hours.
+            </p>
+<div className="p-2 rounded-lg bg-surface-container-low flex items-center justify-between">
+<div className="flex items-center gap-2">
+<span className="material-symbols-outlined text-secondary text-[18px]">account_balance</span>
+<span className="font-body-sm text-body-sm text-on-surface">HDFC Operating CC</span>
+</div>
+<span className="font-label-metric-md text-label-metric-md text-semantic-success">₹18.4L Limit</span>
+</div>
+</div>
+</div>
+<!-- Working Capital Cycle Mini-Visual Card -->
+<div className="p-4 rounded-xl bg-surface-container-lowest shadow-xl flex flex-col justify-between flex-1">
+<div className="flex items-center justify-between">
+<span className="font-label-caps text-label-caps text-outline uppercase tracking-wider">Working Capital Gap</span>
+<span className="px-2 py-0.5 rounded-full bg-tertiary-container/20 text-tertiary font-label-caps text-label-caps">Optimal</span>
+</div>
+<div className="my-2 flex items-baseline justify-between">
+<div>
+<span className="font-display-lg text-[32px] leading-tight text-on-surface font-semibold">18</span>
+<span className="font-body-md text-body-md text-on-surface-variant ml-1">Days</span>
+</div>
+<div className="text-right">
+<span className="font-label-metric-md text-label-metric-md text-semantic-success font-semibold">-5.2 Days</span>
+<p className="font-body-sm text-body-sm text-outline text-[11px]">improved vs Q1</p>
+</div>
+</div>
+<!-- Mini step indicators -->
+<div className="grid grid-cols-3 gap-2 pt-2 border-t border-border-glass">
+<div className="flex flex-col">
+<span className="font-label-caps text-label-caps text-outline">DSO</span>
+<span className="font-label-metric-md text-label-metric-md text-on-surface">33.2d</span>
+</div>
+<div className="flex flex-col">
+<span className="font-label-caps text-label-caps text-outline">DIO</span>
+<span className="font-label-metric-md text-label-metric-md text-on-surface">26.8d</span>
+</div>
+<div className="flex flex-col">
+<span className="font-label-caps text-label-caps text-outline">DPO</span>
+<span className="font-label-metric-md text-label-metric-md text-on-surface">42.0d</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- THIRD SECTION: Financial Signals (Behavioral diagnostic telemetry cards) -->
+<div className="flex flex-col gap-4">
+<div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<span className="font-label-caps text-label-caps text-tertiary uppercase tracking-wider">Behavioral Diagnostic Telemetry</span>
+<h3 className="font-headline-md text-headline-md text-on-surface font-semibold">Financial Signals &amp; Underwriting Risk Radar</h3>
+</div>
+<div className="flex items-center gap-2 text-outline font-body-sm text-body-sm">
+<span className="material-symbols-outlined text-[16px] text-tertiary">model_training</span>
+<span>MRIP Autonomous Pattern Detection</span>
+</div>
+</div>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5">
+<!-- Signal 1: Revenue Trend -->
+<div className="p-4 rounded-xl bg-surface-container-lowest shadow-md flex flex-col justify-between hover:bg-surface-container-low transition-all">
+<div className="flex items-center justify-between">
+<span className="font-label-caps text-label-caps text-outline uppercase tracking-wider">Revenue Trend</span>
+<span className="w-2.5 h-2.5 rounded-full bg-semantic-success shadow-[0_0_8px_#10B981]"></span>
+</div>
+<div className="my-4 flex flex-col gap-1">
+<span className="font-headline-sm text-headline-sm text-semantic-success font-semibold">Strong Upward Cadence</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">3-month CAGR +4.2%, healthy sales momentum</span>
+</div>
+<div className="pt-2 border-t border-border-glass flex items-center justify-between text-[11px] font-label-caps text-outline">
+<span>Repeat Order Rate:</span>
+<span className="font-label-metric-md text-label-metric-md text-on-surface font-semibold">82%</span>
+</div>
+</div>
+<!-- Signal 2: Recurring Obligation Ratio -->
+<div className="p-4 rounded-xl bg-surface-container-lowest shadow-md flex flex-col justify-between hover:bg-surface-container-low transition-all">
+<div className="flex items-center justify-between">
+<span className="font-label-caps text-label-caps text-outline uppercase tracking-wider">Recurring Obligations</span>
+<span className="w-2.5 h-2.5 rounded-full bg-semantic-warning animate-pulse shadow-[0_0_8px_#F59E0B]"></span>
+</div>
+<div className="my-4 flex flex-col gap-1">
+<div className="flex items-baseline gap-1.5">
+<span className="font-label-metric-lg text-label-metric-lg text-semantic-warning font-semibold">38.4%</span>
+<span className="font-body-sm text-body-sm text-outline">of Inflow</span>
+</div>
+<span className="font-body-sm text-body-sm text-on-surface-variant">Manageable overhead burden; monitor supplier credit terms</span>
+</div>
+<div className="pt-2 border-t border-border-glass flex items-center justify-between text-[11px] font-label-caps text-outline">
+<span>Critical Threshold:</span>
+<span className="font-label-metric-md text-label-metric-md text-on-surface font-semibold">&lt; 45%</span>
+</div>
+</div>
+<!-- Signal 3: Debt-Service Coverage (DSCR) -->
+<div className="p-4 rounded-xl bg-surface-container-lowest shadow-md flex flex-col justify-between hover:bg-surface-container-low transition-all">
+<div className="flex items-center justify-between">
+<span className="font-label-caps text-label-caps text-outline uppercase tracking-wider">DSCR Telemetry</span>
+<span className="w-2.5 h-2.5 rounded-full bg-semantic-success shadow-[0_0_8px_#10B981]"></span>
+</div>
+<div className="my-4 flex flex-col gap-1">
+<div className="flex items-baseline gap-1.5">
+<span className="font-label-metric-lg text-label-metric-lg text-semantic-success font-semibold">1.82x</span>
+<span className="font-body-sm text-body-sm text-semantic-success font-medium">Coverage</span>
+</div>
+<span className="font-body-sm text-body-sm text-on-surface-variant">Interest coverage healthy; resilient buffer against RBI repo hikes</span>
+</div>
+<div className="pt-2 border-t border-border-glass flex items-center justify-between text-[11px] font-label-caps text-outline">
+<span>Covenant Minimum:</span>
+<span className="font-label-metric-md text-label-metric-md text-on-surface font-semibold">1.25x</span>
+</div>
+</div>
+<!-- Signal 4: Income Diversity -->
+<div className="p-4 rounded-xl bg-surface-container-lowest shadow-md flex flex-col justify-between hover:bg-surface-container-low transition-all">
+<div className="flex items-center justify-between">
+<span className="font-label-caps text-label-caps text-outline uppercase tracking-wider">Income Diversity</span>
+<span className="w-2.5 h-2.5 rounded-full bg-secondary shadow-[0_0_8px_#d0bcff]"></span>
+</div>
+<div className="my-4 flex flex-col gap-1">
+<div className="flex items-baseline gap-1.5">
+<span className="font-label-metric-lg text-label-metric-lg text-secondary font-semibold">68</span>
+<span className="font-body-sm text-body-sm text-outline">/ 100</span>
+</div>
+<span className="font-body-sm text-body-sm text-on-surface-variant">6 distinct revenue streams across 14 active repeat B2B accounts</span>
+</div>
+<div className="pt-2 border-t border-border-glass flex items-center justify-between text-[11px] font-label-caps text-outline">
+<span>Primary Sector:</span>
+<span className="font-label-metric-md text-label-metric-md text-on-surface font-semibold">FMCG &amp; Auto</span>
+</div>
+</div>
+<!-- Signal 5: Customer Concentration (Risk Warning) -->
+<div className="p-4 rounded-xl bg-surface-container-lowest shadow-md flex flex-col justify-between hover:bg-surface-container-low transition-all relative overflow-hidden">
+<div className="absolute -right-6 -bottom-6 w-24 h-24 bg-semantic-critical/10 rounded-full blur-xl pointer-events-none"></div>
+<div className="flex items-center justify-between">
+<span className="font-label-caps text-label-caps text-semantic-critical uppercase tracking-wider">Concentration Alert</span>
+<span className="material-symbols-outlined text-[18px] text-semantic-critical">priority_high</span>
+</div>
+<div className="my-4 flex flex-col gap-1">
+<div className="flex items-baseline gap-1.5">
+<span className="font-label-metric-lg text-label-metric-lg text-semantic-critical font-semibold">62.5%</span>
+<span className="font-body-sm text-body-sm text-outline">Top 3 Clients</span>
+</div>
+<span className="font-body-sm text-body-sm text-on-surface-variant">High single-exposure to tier-1 automotive supplier OEM</span>
+</div>
+<div className="pt-2 border-t border-border-glass flex items-center justify-between text-[11px] font-label-caps text-semantic-critical">
+<span>Underwriter Note:</span>
+<span className="font-label-metric-md text-label-metric-md font-semibold">Requires Debtor Insurance</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Verified Telemetry Footer Ribbon -->
+<div className="p-4 rounded-xl bg-surface-container-lowest/90 shadow-md flex flex-col md:flex-row md:items-center justify-between gap-2">
+<div className="flex flex-wrap items-center gap-4 text-outline text-[12px]">
+<div className="flex items-center gap-2">
+<span className="material-symbols-outlined text-[18px] text-semantic-success">verified</span>
+<span className="font-body-sm text-body-sm text-on-surface">Data coverage: <strong className="text-semantic-success font-label-metric-md text-label-metric-md">96%</strong></span>
+</div>
+<span className="text-outline-variant hidden md:inline">|</span>
+<span className="font-body-sm text-body-sm text-on-surface-variant">Bank Statement Analyzer <strong className="font-label-caps text-label-caps text-primary">v4.2</strong></span>
+<span className="text-outline-variant hidden md:inline">|</span>
+<span className="font-body-sm text-body-sm text-outline">All figures verified against monthly GST R-1 &amp; 3B regulatory filings</span>
+</div>
+<div className="flex items-center gap-2">
+<button className="px-4 py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-body-sm text-body-sm transition-colors flex items-center gap-1.5">
+<span className="material-symbols-outlined text-[16px]">file_download</span>
+          Export Cash Flow Audit
+        </button>
+<button className="px-4 py-1.5 rounded-lg bg-primary-container hover:brightness-110 text-on-primary-container font-body-sm text-body-sm font-semibold transition-all shadow-[0_0_16px_rgba(99,102,241,0.25)] flex items-center gap-1.5">
+<span className="material-symbols-outlined text-[16px]">tune</span>
+          Run Stress Scenario
+        </button>
+</div>
+</div>
+</div>
+</div></main></div></body></html>
