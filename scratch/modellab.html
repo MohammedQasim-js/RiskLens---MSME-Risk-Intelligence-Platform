@@ -1,0 +1,593 @@
+<!DOCTYPE html><html class="dark" lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Inter:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-lowest":"#0b0e15","secondary-container":"#571bc1","border-glass":"rgba(255, 255, 255, 0.08)","surface-base":"#0A0D14","on-secondary-fixed":"#23005c","on-error-container":"#ffdad6","inverse-primary":"#494bd6","on-primary-fixed":"#07006c","surface-overlay":"#141B2D","primary-fixed":"#e1e0ff","glass-fill-hover":"rgba(20, 27, 45, 0.80)","tertiary-container":"#009eb9","surface":"#10131a","on-secondary-fixed-variant":"#5516be","surface-variant":"#32353d","on-primary":"#1000a9","on-surface":"#e1e2ec","secondary-fixed":"#e9ddff","on-background":"#e1e2ec","semantic-success":"#10B981","accent-electric":"#38BDF8","glass-fill":"rgba(15, 20, 34, 0.65)","surface-container-highest":"#32353d","on-tertiary-fixed-variant":"#004e5c","on-primary-container":"#0d0096","border-glass-strong":"rgba(255, 255, 255, 0.16)","surface-container":"#1d1f27","surface-tint":"#c0c1ff","primary":"#c0c1ff","background":"#10131a","primary-fixed-dim":"#c0c1ff","surface-dim":"#10131a","on-error":"#690005","semantic-warning":"#F59E0B","on-surface-variant":"#c7c4d7","on-tertiary-container":"#002f38","on-tertiary":"#003640","tertiary-fixed":"#acedff","error-container":"#93000a","tertiary-fixed-dim":"#4cd7f6","surface-bright":"#363941","outline-variant":"#464554","error":"#ffb4ab","surface-container-low":"#191b23","semantic-critical":"#F43F5E","secondary-fixed-dim":"#d0bcff","on-secondary":"#3c0091","on-secondary-container":"#c4abff","on-primary-fixed-variant":"#2f2ebe","surface-container-high":"#272a32","surface-raised":"#0F1422","on-tertiary-fixed":"#001f26","tertiary":"#4cd7f6","outline":"#908fa0","inverse-surface":"#e1e2ec","inverse-on-surface":"#2d3038","secondary":"#d0bcff","primary-container":"#8083ff"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"gutter-mobile":"0.75rem","space-sm":"0.5rem","margin-mobile":"1rem","space-lg":"1.5rem","space-xl":"2.5rem",margin:"2rem",gutter:"1.25rem","space-xs":"0.25rem","space-md":"1rem"},fontFamily:{"body-lg":["Inter"],"label-caps":["Inter"],"display-lg":["Geist"],"body-sm":["Inter"],"body-md":["Inter"],"label-metric-md":["JetBrains Mono"],"headline-md":["Geist"],"headline-xl-mobile":["Geist"],"display-lg-mobile":["Geist"],"label-metric-lg":["JetBrains Mono"],"headline-xl":["Geist"],"headline-lg":["Geist"],"headline-sm":["Geist"]},fontSize:{"body-lg":["16px",{lineHeight:"24px",letterSpacing:"-0.01em",fontWeight:"400"}],"label-caps":["11px",{lineHeight:"16px",letterSpacing:"0.06em",fontWeight:"600"}],"display-lg":["48px",{lineHeight:"56px",letterSpacing:"-0.03em",fontWeight:"600"}],"body-sm":["12px",{lineHeight:"18px",letterSpacing:"0.01em",fontWeight:"400"}],"body-md":["14px",{lineHeight:"20px",letterSpacing:"0em",fontWeight:"400"}],"label-metric-md":["14px",{lineHeight:"20px",letterSpacing:"0em",fontWeight:"500"}],"headline-md":["22px",{lineHeight:"30px",letterSpacing:"-0.015em",fontWeight:"500"}],"headline-xl-mobile":["26px",{lineHeight:"34px",letterSpacing:"-0.02em",fontWeight:"600"}],"display-lg-mobile":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"600"}],"label-metric-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.02em",fontWeight:"500"}],"headline-xl":["36px",{lineHeight:"44px",letterSpacing:"-0.025em",fontWeight:"600"}],"headline-lg":["28px",{lineHeight:"36px",letterSpacing:"-0.02em",fontWeight:"600"}],"headline-sm":["18px",{lineHeight:"26px",letterSpacing:"-0.01em",fontWeight:"500"}]}}}};</script><style>
+@font-face {
+  font-family: 'Inter var';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url("chrome-extension://neabdmkliomokekhgnogbeonopbjmajc/content/Inter-roman.var.woff2?v=3.19") format("woff2");
+}
+@font-face {
+  font-family: 'Inter var';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+  font-named-instance: 'Italic';
+  src: url("chrome-extension://neabdmkliomokekhgnogbeonopbjmajc/content/Inter-italic.var.woff2?v=3.19") format("woff2");
+}
+</style><style>
+@font-face {
+  font-family: 'Inter var';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url("chrome-extension://neabdmkliomokekhgnogbeonopbjmajc/content/Inter-roman.var.woff2?v=3.19") format("woff2");
+}
+@font-face {
+  font-family: 'Inter var';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+  font-named-instance: 'Italic';
+  src: url("chrome-extension://neabdmkliomokekhgnogbeonopbjmajc/content/Inter-italic.var.woff2?v=3.19") format("woff2");
+}
+</style></head><body class="bg-surface-base font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-lowest/90 backdrop-blur-2xl z-50 flex flex-col justify-between border-r border-border-glass shadow-[0_8px_32px_-4px_rgba(0,0,0,0.45)]"><div class="flex flex-col flex-1 overflow-y-auto"><div class="h-16 px-space-md flex items-center justify-between border-b border-border-glass"><div class="flex items-center gap-space-sm"><img alt="RiskLens MRIP Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UvG8Yk7CY-ssJoe1p7NbQGWzQrOH4cH06gKF0H_NC4iHpkoQyLimYy2dZsuz1wjyRURVQimQLQVDXiARAlxi4fuYDeon6d70jbeiwgrNUtKiNHHaXP7RC5mgZb6bS0iqB1jY-uQTHA335qgctiZyNfdRKNVKMiqaPbjeTNlumfqguFzI2R9StY2vWAYqMLneE0qo2UEV5x0qboheUvxfJ04-UBV9r6Aj5Mqx1xvSaEjdrlsly9aGeGOm3A"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">RiskLens</span><span class="font-label-caps text-label-caps text-tertiary tracking-wider uppercase">MRIP Engine</span></div></div><span class="px-space-xs py-0.5 rounded-full bg-secondary-container/30 border border-secondary-container/50 text-secondary font-label-caps text-label-caps">v3.8</span></div><div class="px-space-md py-space-sm"><div class="px-space-sm py-space-xs font-label-caps text-label-caps text-outline uppercase tracking-wider">Intelligence Suites</div><nav class="flex flex-col gap-1 mt-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-medium rounded-xl shadow-[0_0_20px_rgba(99,102,241,0.25)]"><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200 font-body-md text-body-md" data-path="overview" href="#">Overview</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200 font-body-md text-body-md" data-path="cash-flow" href="#">Cash Flow</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200 font-body-md text-body-md" data-path="plan-vs-actual" href="#">Plan vs Actual</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200 font-body-md text-body-md" data-path="forecast" href="#">Forecast</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200 font-body-md text-body-md" data-path="stress-lab" href="#">Stress Lab</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200 font-body-md text-body-md" data-path="explainability" href="#">Explainability</a><a aria-current="page" class="flex items-center px-space-md py-space-sm transition-all duration-200 bg-primary-container text-on-primary-container font-medium rounded-xl shadow-[0_0_20px_rgba(99,102,241,0.25)]" data-path="model-lab" href="#">Model Lab &amp; Fairness</a><a class="flex items-center pl-space-xl pr-space-md py-1.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200 font-body-sm text-body-sm" data-path="fairness" href="#">↳ Fairness Evaluation</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200 font-body-md text-body-md" data-path="report" href="#">Report</a></nav></div></div><div class="p-space-md flex flex-col gap-space-sm border-t border-border-glass bg-surface-container-low/40"><div class="p-space-sm rounded-lg bg-surface-container/60 border border-border-glass flex flex-col gap-1"><div class="flex items-center justify-between"><span class="font-label-caps text-label-caps text-semantic-success flex items-center gap-1.5"><span class="inline-block w-1.5 h-1.5 rounded-full bg-semantic-success animate-pulse"></span>RBI / AA Protocol Enclave</span><span class="material-symbols-outlined text-[14px] text-semantic-success">verified_user</span></div><span class="font-body-sm text-body-sm text-outline-variant text-[11px]">Tier-1 End-to-End Encryption</span></div><div class="flex items-center justify-between pt-1"><a class="flex items-center gap-1.5 text-on-surface-variant hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="settings" href="#"><span class="material-symbols-outlined text-[18px]">settings</span><span>Settings</span></a><a class="flex items-center gap-1.5 text-on-surface-variant hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="support" href="#"><span class="material-symbols-outlined text-[18px]">contact_support</span><span>Support</span></a><div class="flex items-center gap-1.5 text-on-surface-variant font-label-caps text-label-caps"><span class="w-2 h-2 rounded-full bg-semantic-success"></span><span>Active</span></div></div></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/80 backdrop-blur-xl z-40 border-b border-border-glass shadow-[0_4px_24px_-2px_rgba(0,0,0,0.35)] px-margin flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm px-space-md py-1.5 rounded-xl bg-surface-container-low/80 border border-border-glass hover:border-accent-electric/40 transition-all cursor-pointer"><div class="flex flex-col text-left"><div class="flex items-center gap-2"><span class="font-body-md text-body-md font-semibold text-on-surface">Aarav Packaging Pvt Ltd</span><span class="px-1.5 py-0.5 rounded bg-tertiary-container/20 text-tertiary border border-tertiary-container/30 font-label-caps text-label-caps">MSME</span></div><span class="font-body-sm text-body-sm text-outline">Manufacturing · Mumbai Plant 1</span></div><span class="material-symbols-outlined text-outline text-[18px]">unfold_more</span></div><div class="hidden xl:flex items-center gap-space-sm pl-space-xs"><div class="flex items-center gap-2 px-space-md py-1 rounded-full bg-surface-container-high/60 border border-border-glass"><span class="w-2 h-2 rounded-full bg-semantic-success shadow-[0_0_8px_#10B981]"></span><span class="font-label-metric-md text-label-metric-md text-on-surface-variant text-[12px]">Updated Today, Sep 30, 2026</span></div><div class="flex items-center gap-2 px-space-md py-1 rounded-full bg-primary-container/10 border border-primary-container/30"><span class="material-symbols-outlined text-[16px] text-tertiary">speed</span><span class="font-body-sm text-body-sm text-primary">Data Confidence: <strong class="font-label-metric-md text-label-metric-md text-on-surface">86/100</strong> (High-quality evidence)</span></div></div></div><div class="flex items-center gap-space-md"><button aria-label="Notifications" class="relative p-2 rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/80 transition-colors border border-transparent hover:border-border-glass" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-semantic-critical ring-2 ring-surface-container-lowest"></span></button><div class="h-7 w-px bg-border-glass hidden sm:block"></div><div class="flex items-center gap-space-sm cursor-pointer"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-border-glass-strong" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrXVdUb7V5AO26OCq7Vc4QVBfgBUO2__p2E7em2Lg_BF4Wq94AXjkOiggKzyKoAzH2QjutBL1c1gURjCBfiVztv_hilKUOCUPLTITJNyjd5nlwOvWesfv4U3Kr-Phc0_7WluXPbKagLl28i8_XOTfrcDAb41gPsc6gTuW5ZhGAH7fhHyafDNQwfMVu3nYL6O0wXGEviGGHeOTTTHGESNtuEtmtYivnCAdOVbzZvw_3wKuBL21LG970rQ"><div class="hidden lg:flex flex-col text-right"><span class="font-body-md text-body-md font-medium text-on-surface leading-tight">Priya Sharma</span><span class="font-body-sm text-body-sm text-outline text-[11px] leading-tight">Chief Risk Officer / Finance Lead</span></div></div></div></header><main class="w-full pt-16 bg-surface-base flex-1"><div class="flex flex-col w-full">
+<div class="px-margin py-space-lg flex flex-col gap-space-lg max-w-[1600px] mx-auto w-full">
+<!-- Top Institutional Breadcrumb & Header Ribbon -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-2">
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">Model Governance &amp; Risk Intelligence</span>
+<span class="text-outline text-body-sm font-body-sm">/</span>
+<span class="font-label-caps text-label-caps text-tertiary uppercase tracking-wider">MRIP Core Validation Suite</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight font-semibold">Model Evaluation &amp; Algorithmic Governance</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+          Audit predictive reliability, benchmarking metrics, and demographic bias before deploying underwriter models.
+        </p>
+</div>
+<!-- Action & Audit Provenance Badges -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<div class="px-space-md py-1.5 rounded-lg bg-surface-container-high/70 shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-accent-electric">verified</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">RBI Circular MD-103 Audited</span>
+</div>
+<button class="px-space-md py-2 rounded-lg bg-surface-container-highest text-on-surface hover:bg-surface-bright transition-colors font-body-sm text-body-sm flex items-center gap-2 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span>Download Audit Dossier</span>
+</button>
+</div>
+</div>
+<!-- Persistent Tab Switcher -->
+<div class="p-1 rounded-xl bg-surface-container-lowest/80 shadow-md flex items-center gap-1 w-full max-w-md">
+<button class="flex-1 py-2 px-space-md rounded-lg font-body-sm text-body-sm transition-all duration-200 flex items-center justify-center gap-2 bg-surface-container text-on-surface font-medium shadow-sm" id="tab-btn-model-lab" onclick="switchGovTab('model-lab')" type="button">
+<span class="material-symbols-outlined text-[16px] text-tertiary">tune</span>
+<span>Model Lab</span>
+</button>
+<button class="flex-1 py-2 px-space-md rounded-lg font-body-sm text-body-sm transition-all duration-200 flex items-center justify-center gap-2 text-on-surface-variant hover:text-on-surface" id="tab-btn-fairness" onclick="switchGovTab('fairness')" type="button">
+<span class="material-symbols-outlined text-[16px]">balance</span>
+<span>Fairness &amp; Bias Analysis</span>
+</button>
+</div>
+<!-- VIEW 1: MODEL LAB (DEFAULT ACTIVE) -->
+<div class="flex flex-col gap-space-xl" id="view-model-lab">
+<!-- Sub-Workspace Heading & Champion Strip -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pt-2">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-tertiary uppercase tracking-wider">Benchmarking Enclave</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold">Model Lab View</h2>
+<p class="font-body-sm text-body-sm text-outline">Compare model behavior before choosing which model to trust.</p>
+</div>
+<!-- Subtle Champion Tag (Institutional, not gamified) -->
+<div class="inline-flex items-center gap-2 px-space-md py-1.5 rounded-lg bg-surface-container-high/80 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_rgba(208,188,255,0.6)]"></span>
+<span class="font-label-caps text-label-caps text-secondary-fixed uppercase tracking-wider">Current Champion:</span>
+<span class="font-label-metric-md text-label-metric-md text-on-surface font-semibold text-[13px]">Gradient Boosting v0.3</span>
+</div>
+</div>
+<!-- Top 3 Benchmark Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Card A: Baseline Logistic Regression -->
+<div class="rounded-xl p-space-lg bg-surface-container-low/70 shadow-md flex flex-col justify-between gap-space-md relative overflow-hidden transition-all hover:bg-surface-container/70">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded text-[10px] font-label-caps uppercase tracking-wider bg-surface-container-high text-outline">Baseline</span>
+<span class="font-label-caps text-label-caps text-outline">v1.1 Stable</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Logistic Regression</h3>
+<p class="font-body-sm text-body-sm text-outline mt-0.5 truncate">L2-Penalized Generalized Linear Model</p>
+</div>
+<div class="grid grid-cols-3 gap-2 pt-space-xs">
+<div class="flex flex-col p-2 rounded-lg bg-surface-container-lowest/60">
+<span class="font-label-caps text-[10px] text-outline uppercase">ROC-AUC</span>
+<span class="font-label-metric-md text-label-metric-md text-on-surface text-[15px] mt-0.5">0.78</span>
+</div>
+<div class="flex flex-col p-2 rounded-lg bg-surface-container-lowest/60">
+<span class="font-label-caps text-[10px] text-outline uppercase">PR-AUC</span>
+<span class="font-label-metric-md text-label-metric-md text-on-surface text-[15px] mt-0.5">0.51</span>
+</div>
+<div class="flex flex-col p-2 rounded-lg bg-surface-container-lowest/60">
+<span class="font-label-caps text-[10px] text-outline uppercase">Brier</span>
+<span class="font-label-metric-md text-label-metric-md text-on-surface text-[15px] mt-0.5">0.142</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-2 pt-space-sm">
+<div class="flex items-center justify-between font-label-caps text-label-caps text-outline">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[13px]">timer</span> 12ms latency</span>
+<span>14 linear ratios</span>
+</div>
+<div class="w-full py-1.5 px-space-sm rounded bg-surface-container-highest text-center font-label-caps text-[11px] text-outline uppercase tracking-wider">
+              Fallback / Baseline
+            </div>
+</div>
+</div>
+<!-- Card B: Current Champion Gradient Boosting -->
+<div class="rounded-xl p-space-lg bg-surface-container/90 shadow-xl flex flex-col justify-between gap-space-md relative overflow-hidden transition-all">
+<div class="absolute -top-16 -right-16 w-36 h-36 rounded-full bg-secondary-container/20 blur-2xl pointer-events-none"></div>
+<div class="flex flex-col gap-space-sm relative z-10">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded text-[10px] font-label-caps uppercase tracking-wider bg-secondary-container/40 text-secondary font-semibold">Active Production</span>
+<span class="font-label-caps text-label-caps text-accent-electric flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-semantic-success animate-pulse"></span> Champion
+              </span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold flex items-center gap-2">
+<span>Gradient Boosting</span>
+<span class="font-label-caps text-[11px] text-secondary font-normal">v0.3</span>
+</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 truncate">LightGBM Multi-Vector Ensemble</p>
+</div>
+<div class="grid grid-cols-3 gap-2 pt-space-xs">
+<div class="flex flex-col p-2 rounded-lg bg-surface-container-lowest/80">
+<span class="font-label-caps text-[10px] text-outline uppercase">ROC-AUC</span>
+<span class="font-label-metric-md text-label-metric-md text-semantic-success text-[15px] font-bold mt-0.5">0.84</span>
+</div>
+<div class="flex flex-col p-2 rounded-lg bg-surface-container-lowest/80">
+<span class="font-label-caps text-[10px] text-outline uppercase">PR-AUC</span>
+<span class="font-label-metric-md text-label-metric-md text-semantic-success text-[15px] font-bold mt-0.5">0.63</span>
+</div>
+<div class="flex flex-col p-2 rounded-lg bg-surface-container-lowest/80">
+<span class="font-label-caps text-[10px] text-outline uppercase">Brier</span>
+<span class="font-label-metric-md text-label-metric-md text-tertiary text-[15px] font-bold mt-0.5">0.118</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-2 pt-space-sm relative z-10">
+<div class="flex items-center justify-between font-label-caps text-label-caps text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[13px] text-secondary">speed</span> 42ms latency</span>
+<span>86 non-linear features</span>
+</div>
+<div class="w-full py-1.5 px-space-sm rounded bg-primary-container text-on-primary-container text-center font-label-caps text-[11px] font-semibold uppercase tracking-wider shadow-sm">
+              Production Champion (Serving Live)
+            </div>
+</div>
+</div>
+<!-- Card C: Challenger Neural Tabular Net -->
+<div class="rounded-xl p-space-lg bg-surface-container-low/70 shadow-md flex flex-col justify-between gap-space-md relative overflow-hidden transition-all hover:bg-surface-container/70">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded text-[10px] font-label-caps uppercase tracking-wider bg-surface-container-high text-accent-electric">Challenger</span>
+<span class="font-label-caps text-label-caps text-outline">v0.1 Shadow</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Neural Tabular Net</h3>
+<p class="font-body-sm text-body-sm text-outline mt-0.5 truncate">FT-Transformer with Self-Attention</p>
+</div>
+<div class="grid grid-cols-3 gap-2 pt-space-xs">
+<div class="flex flex-col p-2 rounded-lg bg-surface-container-lowest/60">
+<span class="font-label-caps text-[10px] text-outline uppercase">ROC-AUC</span>
+<span class="font-label-metric-md text-label-metric-md text-on-surface text-[15px] mt-0.5">0.83</span>
+</div>
+<div class="flex flex-col p-2 rounded-lg bg-surface-container-lowest/60">
+<span class="font-label-caps text-[10px] text-outline uppercase">PR-AUC</span>
+<span class="font-label-metric-md text-label-metric-md text-on-surface text-[15px] mt-0.5">0.61</span>
+</div>
+<div class="flex flex-col p-2 rounded-lg bg-surface-container-lowest/60">
+<span class="font-label-caps text-[10px] text-outline uppercase">Brier</span>
+<span class="font-label-metric-md text-label-metric-md text-on-surface text-[15px] mt-0.5">0.124</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-2 pt-space-sm">
+<div class="flex items-center justify-between font-label-caps text-label-caps text-outline">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[13px]">hourglass_top</span> 110ms latency</span>
+<span>140 embeddings</span>
+</div>
+<div class="w-full py-1.5 px-space-sm rounded bg-surface-container-highest text-center font-label-caps text-[11px] text-accent-electric uppercase tracking-wider">
+              Experimental Challenger
+            </div>
+</div>
+</div>
+</div>
+<!-- Institutional Visual: Dual Calibration / Discriminant Sparkline Deck -->
+<div class="rounded-xl p-space-lg bg-surface-container-low/60 shadow-lg flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Reliability &amp; Risk Discriminations Curve</h3>
+<p class="font-body-sm text-body-sm text-outline">Empirical Default Probabilities against Expected Calibrated Bins (10 Quantiles)</p>
+</div>
+<div class="flex items-center gap-space-md font-label-caps text-label-caps text-outline">
+<span class="flex items-center gap-1.5"><span class="w-3 h-0.5 bg-outline"></span> Baseline</span>
+<span class="flex items-center gap-1.5"><span class="w-3 h-0.5 bg-secondary"></span> Champion v0.3</span>
+<span class="flex items-center gap-1.5"><span class="w-3 h-0.5 bg-tertiary"></span> Challenger</span>
+</div>
+</div>
+<div class="w-full h-36 flex items-end gap-1 px-2 pt-4 bg-surface-container-lowest/60 rounded-lg relative overflow-hidden">
+<!-- Reference baseline 45-degree guideline -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" preserveAspectRatio="none" viewBox="0 0 100 100">
+<line stroke="rgba(255,255,255,0.08)" stroke-dasharray="2,2" stroke-width="0.8" x1="0" x2="100" y1="100" y2="0"></line>
+<!-- Baseline Model Curve -->
+<path d="M 0,100 Q 20,88 40,70 T 80,30 T 100,5" fill="none" stroke="rgba(144, 143, 160, 0.4)" stroke-width="1.5"></path>
+<!-- Challenger Curve -->
+<path d="M 0,100 Q 25,82 50,55 T 85,18 T 100,0" fill="none" stroke="#4cd7f6" stroke-width="1.8"></path>
+<!-- Champion Curve (Tight to diagonal) -->
+<path d="M 0,100 Q 22,78 48,52 T 82,16 T 100,0" fill="none" stroke="#d0bcff" stroke-width="2.2"></path>
+</svg>
+<div class="w-full flex justify-between font-label-metric-md text-[10px] text-outline absolute bottom-1 px-3">
+<span>Decile 1 (0–2% PD)</span>
+<span>Decile 5 (8% Cutoff)</span>
+<span>Decile 10 (&gt;35% Critical PD)</span>
+</div>
+</div>
+</div>
+<!-- Comprehensive Model Diagnostic Comparison Matrix (Table) -->
+<div class="rounded-xl bg-surface-container-low/70 shadow-lg overflow-hidden flex flex-col">
+<div class="p-space-md sm:p-space-lg flex items-center justify-between bg-surface-container/60">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Diagnostic Comparison Matrix</h3>
+<p class="font-body-sm text-body-sm text-outline">Empirical hold-out evaluation on 18,450 historical MSME repayment cycles</p>
+</div>
+<span class="px-space-sm py-1 rounded bg-surface-container-high text-on-surface font-label-caps text-label-caps">N = 18,450 Cohort</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-md text-body-md border-collapse">
+<thead>
+<tr class="bg-surface-container-lowest/80 text-outline font-label-caps text-label-caps uppercase tracking-wider">
+<th class="py-3 px-space-lg">Evaluation Metric</th>
+<th class="py-3 px-space-md">Logistic Regression v1.1</th>
+<th class="py-3 px-space-md text-secondary">Gradient Boosting (Champion)</th>
+<th class="py-3 px-space-md">Tabular Net (Challenger)</th>
+<th class="py-3 px-space-lg text-right">Regulatory Benchmark Target</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<!-- Row 1: ROC-AUC -->
+<tr class="hover:bg-surface-container/40 transition-colors">
+<td class="py-3.5 px-space-lg font-medium text-on-surface flex items-center gap-2">
+<span>ROC-AUC</span>
+<span class="font-body-sm text-[11px] text-outline font-normal">(Area Under ROC)</span>
+</td>
+<td class="py-3.5 px-space-md font-label-metric-md text-on-surface-variant">0.78</td>
+<td class="py-3.5 px-space-md font-label-metric-md text-secondary font-semibold">0.84</td>
+<td class="py-3.5 px-space-md font-label-metric-md text-on-surface">0.83</td>
+<td class="py-3.5 px-space-lg text-right font-label-metric-md text-semantic-success">≥ 0.80 (Pass)</td>
+</tr>
+<!-- Row 2: PR-AUC -->
+<tr class="bg-surface-container-lowest/30 hover:bg-surface-container/40 transition-colors">
+<td class="py-3.5 px-space-lg font-medium text-on-surface flex items-center gap-2">
+<span>PR-AUC</span>
+<span class="font-body-sm text-[11px] text-outline font-normal">(Precision-Recall AUC)</span>
+</td>
+<td class="py-3.5 px-space-md font-label-metric-md text-semantic-critical">0.51</td>
+<td class="py-3.5 px-space-md font-label-metric-md text-secondary font-semibold">0.63</td>
+<td class="py-3.5 px-space-md font-label-metric-md text-on-surface">0.61</td>
+<td class="py-3.5 px-space-lg text-right font-label-metric-md text-semantic-success">≥ 0.60 (Pass)</td>
+</tr>
+<!-- Row 3: Brier Calibration Score -->
+<tr class="hover:bg-surface-container/40 transition-colors">
+<td class="py-3.5 px-space-lg font-medium text-on-surface flex items-center gap-2">
+<span>Brier Calibration Score</span>
+<span class="font-body-sm text-[11px] text-outline font-normal">(Lower is superior)</span>
+</td>
+<td class="py-3.5 px-space-md font-label-metric-md text-outline">0.142</td>
+<td class="py-3.5 px-space-md font-label-metric-md text-secondary font-semibold">0.118</td>
+<td class="py-3.5 px-space-md font-label-metric-md text-on-surface">0.124</td>
+<td class="py-3.5 px-space-lg text-right font-label-metric-md text-semantic-success">≤ 0.120 (Optimal)</td>
+</tr>
+<!-- Row 4: Precision -->
+<tr class="bg-surface-container-lowest/30 hover:bg-surface-container/40 transition-colors">
+<td class="py-3.5 px-space-lg font-medium text-on-surface">Precision (@ 8% PD Cutoff)</td>
+<td class="py-3.5 px-space-md font-label-metric-md text-semantic-critical">72.4%</td>
+<td class="py-3.5 px-space-md font-label-metric-md text-secondary font-semibold">81.6%</td>
+<td class="py-3.5 px-space-md font-label-metric-md text-on-surface">79.1%</td>
+<td class="py-3.5 px-space-lg text-right font-label-metric-md text-semantic-success">≥ 75.0%</td>
+</tr>
+<!-- Row 5: Recall -->
+<tr class="hover:bg-surface-container/40 transition-colors">
+<td class="py-3.5 px-space-lg font-medium text-on-surface">Recall (@ 8% PD Cutoff)</td>
+<td class="py-3.5 px-space-md font-label-metric-md text-outline">68.1%</td>
+<td class="py-3.5 px-space-md font-label-metric-md text-secondary font-semibold">76.5%</td>
+<td class="py-3.5 px-space-md font-label-metric-md text-on-surface">77.2%</td>
+<td class="py-3.5 px-space-lg text-right font-label-metric-md text-semantic-success">≥ 70.0%</td>
+</tr>
+<!-- Row 6: False Positive Rate (FPR) -->
+<tr class="bg-surface-container-lowest/30 hover:bg-surface-container/40 transition-colors">
+<td class="py-3.5 px-space-lg font-medium text-on-surface">False Positive Rate (FPR)</td>
+<td class="py-3.5 px-space-md font-label-metric-md text-semantic-critical">14.2%</td>
+<td class="py-3.5 px-space-md font-label-metric-md text-secondary font-semibold">8.4%</td>
+<td class="py-3.5 px-space-md font-label-metric-md text-on-surface">9.1%</td>
+<td class="py-3.5 px-space-lg text-right font-label-metric-md text-semantic-success">≤ 10.0%</td>
+</tr>
+<!-- Row 7: False Negative Rate (FNR) -->
+<tr class="hover:bg-surface-container/40 transition-colors">
+<td class="py-3.5 px-space-lg font-medium text-on-surface">False Negative Rate (FNR)</td>
+<td class="py-3.5 px-space-md font-label-metric-md text-semantic-critical">31.9%</td>
+<td class="py-3.5 px-space-md font-label-metric-md text-secondary font-semibold">23.5%</td>
+<td class="py-3.5 px-space-md font-label-metric-md text-on-surface">22.8%</td>
+<td class="py-3.5 px-space-lg text-right font-label-metric-md text-semantic-success">≤ 25.0%</td>
+</tr>
+<!-- Row 8: Population Stability Index (PSI) -->
+<tr class="bg-surface-container-lowest/30 hover:bg-surface-container/40 transition-colors">
+<td class="py-3.5 px-space-lg font-medium text-on-surface">Population Stability Index (PSI)</td>
+<td class="py-3.5 px-space-md font-label-metric-md text-on-surface-variant">0.08 <span class="text-[11px] text-outline">(Stable)</span></td>
+<td class="py-3.5 px-space-md font-label-metric-md text-semantic-success font-semibold">0.04 <span class="text-[11px] text-semantic-success">(Highly Stable)</span></td>
+<td class="py-3.5 px-space-md font-label-metric-md text-on-surface">0.09 <span class="text-[11px] text-outline">(Stable)</span></td>
+<td class="py-3.5 px-space-lg text-right font-label-metric-md text-semantic-success">&lt; 0.10</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- VIEW 2: FAIRNESS TAB (INTEGRATED SUB-WORKSPACE) -->
+<div class="hidden flex-col gap-space-xl" id="view-fairness">
+<!-- Sub-Workspace Heading & Governance Notice -->
+<div class="flex flex-col gap-space-sm pt-2">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-tertiary uppercase tracking-wider">Demographic Disparity &amp; Impact Auditing</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold">Fairness &amp; Bias Analysis</h2>
+</div>
+<!-- Strict Institutional Governance Note -->
+<div class="p-space-md rounded-xl bg-surface-container-high/60 shadow-sm flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-tertiary mt-0.5">policy</span>
+<div class="flex flex-col gap-1">
+<span class="font-label-caps text-label-caps text-on-surface uppercase tracking-wider font-semibold">Regulatory Protocol Compliance</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Protected attributes are evaluation-only unless explicitly governed for another purpose. Regulated under RBI Fair Lending Principles and Algorithmic Audit standards.
+            </p>
+</div>
+</div>
+</div>
+<!-- Dimensional Evaluator Filter / Summary Bar -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-sm">
+<div class="p-space-md rounded-xl bg-surface-container-low/80 shadow-sm flex flex-col gap-1">
+<span class="font-label-caps text-[10px] text-outline uppercase tracking-wider">Dimension 1: Geography</span>
+<span class="font-body-md text-body-md text-on-surface font-medium">Urban / Hubs / Clusters</span>
+<span class="font-label-metric-md text-[11px] text-tertiary">3 Monitored Strata</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low/80 shadow-sm flex flex-col gap-1">
+<span class="font-label-caps text-[10px] text-outline uppercase tracking-wider">Dimension 2: Vintage</span>
+<span class="font-body-md text-body-md text-on-surface font-medium">Seed to Mature (&gt;5y)</span>
+<span class="font-label-metric-md text-[11px] text-semantic-success">Zero Drift Detected</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low/80 shadow-sm flex flex-col gap-1">
+<span class="font-label-caps text-[10px] text-outline uppercase tracking-wider">Dimension 3: Industry Vertical</span>
+<span class="font-body-md text-body-md text-on-surface font-medium">Packaging, Auto, Textile</span>
+<span class="font-label-metric-md text-[11px] text-tertiary">4 Audited Sectors</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low/80 shadow-sm flex flex-col gap-1">
+<span class="font-label-caps text-[10px] text-outline uppercase tracking-wider">Dimension 4: MSME Size</span>
+<span class="font-body-md text-body-md text-on-surface font-medium">Micro, Small, Medium</span>
+<span class="font-label-metric-md text-[11px] text-semantic-warning">1 Metric Gap Flagged</span>
+</div>
+</div>
+<!-- Professional Fairness Subgroup Matrix -->
+<div class="rounded-xl bg-surface-container-low/70 shadow-lg overflow-hidden flex flex-col">
+<div class="p-space-md sm:p-space-lg flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs bg-surface-container/60">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Subgroup Disparity Assessment</h3>
+<p class="font-body-sm text-body-sm text-outline">Evaluated under Champion LightGBM v0.3 at 8.0% Probability of Default threshold</p>
+</div>
+<div class="flex items-center gap-space-xs font-label-caps text-label-caps text-outline">
+<span class="w-2 h-2 rounded-full bg-semantic-warning"></span>
+<span>Threshold for Divergence: Δ &gt; 3.0%</span>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-md text-body-md border-collapse">
+<thead>
+<tr class="bg-surface-container-lowest/80 text-outline font-label-caps text-label-caps uppercase tracking-wider">
+<th class="py-3 px-space-lg">Subgroup Dimension</th>
+<th class="py-3 px-space-sm text-right">Selection (%)</th>
+<th class="py-3 px-space-sm text-right">TPR</th>
+<th class="py-3 px-space-sm text-right">FPR</th>
+<th class="py-3 px-space-sm text-right">FNR</th>
+<th class="py-3 px-space-sm text-right">Precision</th>
+<th class="py-3 px-space-sm text-right">ECE</th>
+<th class="py-3 px-space-sm text-right">Sample (n)</th>
+<th class="py-3 px-space-lg text-right">Governance Verdict</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<!-- Row: Small MSME -->
+<tr class="hover:bg-surface-container/40 transition-colors">
+<td class="py-3.5 px-space-lg font-medium text-on-surface">
+<div class="flex flex-col">
+<span>Small Enterprises (₹1–10 Cr)</span>
+<span class="font-body-sm text-[11px] text-outline">MSME Classification</span>
+</div>
+</td>
+<td class="py-3.5 px-space-sm text-right font-label-metric-md text-on-surface">41.2%</td>
+<td class="py-3.5 px-space-sm text-right font-label-metric-md text-on-surface">78.4%</td>
+<td class="py-3.5 px-space-sm text-right font-label-metric-md text-on-surface">8.2%</td>
+<td class="py-3.5 px-space-sm text-right font-label-metric-md text-on-surface">21.6%</td>
+<td class="py-3.5 px-space-sm text-right font-label-metric-md text-on-surface">82.0%</td>
+<td class="py-3.5 px-space-sm text-right font-label-metric-md text-on-surface">0.021</td>
+<td class="py-3.5 px-space-sm text-right font-label-metric-md text-outline">1,420</td>
+<td class="py-3.5 px-space-lg text-right">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-semantic-success font-label-caps text-label-caps">
+<span class="w-1.5 h-1.5 rounded-full bg-semantic-success"></span>
+                    Within observed range
+                  </span>
+</td>
+</tr>
+<!-- Row: Micro MSME (Warning Gap) -->
+<tr class="bg-surface-container-lowest/30 hover:bg-surface-container/40 transition-colors">
+<td class="py-3.5 px-space-lg font-medium text-on-surface">
+<div class="flex flex-col">
+<span>Micro Enterprises (&lt;₹1 Cr)</span>
+<span class="font-body-sm text-[11px] text-outline">MSME Classification</span>
+</div>
+</td>
+<td class="py-3.5 px-space-sm text-right font-label-metric-md text-on-surface">29.8%</td>
+<td class="py-3.5 px-space-sm text-right font-label-metric-md text-on-surface">71.0%</td>
+<td class="py-3.5 px-space-sm text-right font-label-metric-md text-semantic-warning font-semibold">11.6%</td>
+<td class="py-3.5 px-space-sm text-right font-label-metric-md text-on-surface">29.0%</td>
+<td class="py-3.5 px-space-sm text-right font-label-metric-md text-on-surface">74.5%</td>
+<td class="py-3.5 px-space-sm text-right font-label-metric-md text-on-surface">0.048</td>
+<td class="py-3.5 px-space-sm text-right font-label-metric-md text-outline">640</td>
+<td class="py-3.5 px-space-lg text-right">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-semantic-warning/10 text-semantic-warning font-label-caps text-label-caps">
+<span class="material-symbols-outlined text-[13px]">warning</span>
+                    Metric gap detected (FPR Δ +3.4%)
+                  </span>
+</td>
+</tr>
+<!-- Row: Auto Ancillaries -->
+<tr class="hover:bg-surface-container/40 transition-colors">
+<td class="py-3.5 px-space-lg font-medium text-on-surface">
+<div class="flex flex-col">
+<span>Auto Ancillaries</span>
+<span class="font-body-sm text-[11px] text-outline">Industry Vertical</span>
+</div>
+</td>
+<td class="py-3.5 px-space-sm text-right font-label-metric-md text-on-surface">44.5%</td>
+<td class="py-3.5 px-space-sm text-right font-label-metric-md text-on-surface">80.2%</td>
+<td class="py-3.5 px-space-sm text-right font-label-metric-md text-on-surface">7.9%</td>
+<td class="py-3.5 px-space-sm text-right font-label-metric-md text-on-surface">19.8%</td>
+<td class="py-3.5 px-space-sm text-right font-label-metric-md text-on-surface">83.4%</td>
+<td class="py-3.5 px-space-sm text-right font-label-metric-md text-on-surface">0.019</td>
+<td class="py-3.5 px-space-sm text-right font-label-metric-md text-outline">980</td>
+<td class="py-3.5 px-space-lg text-right">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-semantic-success font-label-caps text-label-caps">
+<span class="w-1.5 h-1.5 rounded-full bg-semantic-success"></span>
+                    Within observed range
+                  </span>
+</td>
+</tr>
+<!-- Row: Packaging & Paper -->
+<tr class="bg-surface-container-lowest/30 hover:bg-surface-container/40 transition-colors">
+<td class="py-3.5 px-space-lg font-medium text-on-surface">
+<div class="flex flex-col">
+<span>Packaging &amp; Paper</span>
+<span class="font-body-sm text-[11px] text-outline">Industry Vertical (Subject Profile)</span>
+</div>
+</td>
+<td class="py-3.5 px-space-sm text-right font-label-metric-md text-on-surface">42.8%</td>
+<td class="py-3.5 px-space-sm text-right font-label-metric-md text-on-surface">79.1%</td>
+<td class="py-3.5 px-space-sm text-right font-label-metric-md text-on-surface">8.1%</td>
+<td class="py-3.5 px-space-sm text-right font-label-metric-md text-on-surface">20.9%</td>
+<td class="py-3.5 px-space-sm text-right font-label-metric-md text-on-surface">82.6%</td>
+<td class="py-3.5 px-space-sm text-right font-label-metric-md text-on-surface">0.020</td>
+<td class="py-3.5 px-space-sm text-right font-label-metric-md text-outline">1,150</td>
+<td class="py-3.5 px-space-lg text-right">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-semantic-success font-label-caps text-label-caps">
+<span class="w-1.5 h-1.5 rounded-full bg-semantic-success"></span>
+                    Within observed range
+                  </span>
+</td>
+</tr>
+<!-- Row: Tier-3 Emerging Clusters (Insufficient Sample) -->
+<tr class="hover:bg-surface-container/40 transition-colors">
+<td class="py-3.5 px-space-lg font-medium text-on-surface">
+<div class="flex flex-col">
+<span>Tier-3 Emerging Clusters</span>
+<span class="font-body-sm text-[11px] text-outline">Geography</span>
+</div>
+</td>
+<td class="py-3.5 px-space-sm text-right font-label-metric-md text-outline">——</td>
+<td class="py-3.5 px-space-sm text-right font-label-metric-md text-outline">——</td>
+<td class="py-3.5 px-space-sm text-right font-label-metric-md text-outline">——</td>
+<td class="py-3.5 px-space-sm text-right font-label-metric-md text-outline">——</td>
+<td class="py-3.5 px-space-sm text-right font-label-metric-md text-outline">——</td>
+<td class="py-3.5 px-space-sm text-right font-label-metric-md text-outline">——</td>
+<td class="py-3.5 px-space-sm text-right font-label-metric-md text-semantic-critical font-semibold">42</td>
+<td class="py-3.5 px-space-lg text-right">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-highest text-outline font-label-caps text-[10px] tracking-wider uppercase">
+<span class="material-symbols-outlined text-[12px]">info</span>
+                    INSUFFICIENT SAMPLE
+                  </span>
+</td>
+</tr>
+<!-- Row: Business Vintage Seed (<2 Years) -->
+<tr class="bg-surface-container-lowest/30 hover:bg-surface-container/40 transition-colors">
+<td class="py-3.5 px-space-lg font-medium text-on-surface">
+<div class="flex flex-col">
+<span>Seed Stage (&lt;2 Years)</span>
+<span class="font-body-sm text-[11px] text-outline">Business Vintage</span>
+</div>
+</td>
+<td class="py-3.5 px-space-sm text-right font-label-metric-md text-on-surface">33.1%</td>
+<td class="py-3.5 px-space-sm text-right font-label-metric-md text-on-surface">73.6%</td>
+<td class="py-3.5 px-space-sm text-right font-label-metric-md text-on-surface">9.9%</td>
+<td class="py-3.5 px-space-sm text-right font-label-metric-md text-on-surface">26.4%</td>
+<td class="py-3.5 px-space-sm text-right font-label-metric-md text-on-surface">77.3%</td>
+<td class="py-3.5 px-space-sm text-right font-label-metric-md text-on-surface">0.038</td>
+<td class="py-3.5 px-space-sm text-right font-label-metric-md text-outline">512</td>
+<td class="py-3.5 px-space-lg text-right">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-semantic-success font-label-caps text-label-caps">
+<span class="w-1.5 h-1.5 rounded-full bg-semantic-success"></span>
+                    Within observed range
+                  </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Protocol Attestation Box -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest/80 shadow-md flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">verified_user</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-semibold">Independent Model Validation Attestation</span>
+<span class="font-body-sm text-body-sm text-outline">Signed by MRIP Algorithmic Governance Council · Cryptographic Hash: 8b0c4a...ef91</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-space-md py-1.5 rounded bg-surface-container text-on-surface font-body-sm text-body-sm hover:bg-surface-bright transition-colors" type="button">
+            View Calibration Ledger
+          </button>
+<button class="px-space-md py-1.5 rounded bg-primary-container text-on-primary-container font-body-sm text-body-sm font-medium hover:opacity-90 transition-opacity" type="button">
+            Re-run Bias Disparity Audit
+          </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function switchGovTab(tabKey) {
+    const labView = document.getElementById('view-model-lab');
+    const fairnessView = document.getElementById('view-fairness');
+    const labBtn = document.getElementById('tab-btn-model-lab');
+    const fairnessBtn = document.getElementById('tab-btn-fairness');
+
+    if (tabKey === 'model-lab') {
+      labView.classList.remove('hidden');
+      labView.classList.add('flex');
+      fairnessView.classList.add('hidden');
+      fairnessView.classList.remove('flex');
+
+      labBtn.className = "flex-1 py-2 px-space-md rounded-lg font-body-sm text-body-sm transition-all duration-200 flex items-center justify-center gap-2 bg-surface-container text-on-surface font-medium shadow-sm";
+      fairnessBtn.className = "flex-1 py-2 px-space-md rounded-lg font-body-sm text-body-sm transition-all duration-200 flex items-center justify-center gap-2 text-on-surface-variant hover:text-on-surface";
+    } else {
+      fairnessView.classList.remove('hidden');
+      fairnessView.classList.add('flex');
+      labView.classList.add('hidden');
+      labView.classList.remove('flex');
+
+      fairnessBtn.className = "flex-1 py-2 px-space-md rounded-lg font-body-sm text-body-sm transition-all duration-200 flex items-center justify-center gap-2 bg-surface-container text-on-surface font-medium shadow-sm";
+      labBtn.className = "flex-1 py-2 px-space-md rounded-lg font-body-sm text-body-sm transition-all duration-200 flex items-center justify-center gap-2 text-on-surface-variant hover:text-on-surface";
+    }
+  }
+</script></main></div></body></html>
