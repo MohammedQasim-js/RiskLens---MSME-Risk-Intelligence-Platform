@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
 import { cookies } from "next/headers";
 import { Bell, ChevronDown, User, ShieldCheck } from "lucide-react";
@@ -75,9 +76,9 @@ export async function TopBar() {
           <span className="absolute top-0 right-0 h-2 w-2 rounded-full bg-rose-500 border border-surface" />
         </button>
 
-        <button suppressHydrationWarning className="h-8 w-8 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-on-surface-variant hover:text-white hover:border-white/40 transition-all">
+        <Link href="/settings" suppressHydrationWarning className="h-8 w-8 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-on-surface-variant hover:text-white hover:border-white/40 transition-all">
           <User className="h-4 w-4" />
-        </button>
+        </Link>
       </div>
     </div>
   );

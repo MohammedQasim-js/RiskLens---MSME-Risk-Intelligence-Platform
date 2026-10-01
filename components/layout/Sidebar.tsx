@@ -115,10 +115,10 @@ export function Sidebar() {
         </div>
         
         <div className="flex items-center justify-between pt-1">
-          <button suppressHydrationWarning className="flex items-center gap-1.5 text-on-surface-variant hover:text-on-surface transition-colors font-body-sm text-sm">
+          <Link href="/settings" suppressHydrationWarning className="flex items-center gap-1.5 text-on-surface-variant hover:text-on-surface transition-colors font-body-sm text-sm">
             <Settings className="w-4 h-4" />
             <span>Settings</span>
-          </button>
+          </Link>
           <button suppressHydrationWarning className="flex items-center gap-1.5 text-on-surface-variant hover:text-on-surface transition-colors font-body-sm text-sm">
             <HelpCircle className="w-4 h-4" />
             <span>Support</span>
