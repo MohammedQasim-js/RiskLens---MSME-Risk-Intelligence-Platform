@@ -1,9 +1,7 @@
+
 import { getActiveBusinessId } from '@/lib/data/active-business';
 import { getDashboardData } from '@/lib/data/analytics';
 import Link from 'next/link';
-import { StressLabChart } from './StressLabChart';
-import { RunScenarioButton, ExportStressDossierButton } from './StressLabInteractions';
-
 
 export default async function StressLabPage() {
   const businessId = await getActiveBusinessId();
@@ -57,8 +55,10 @@ export default async function StressLabPage() {
 <span className="material-symbols-outlined text-[16px] text-outline">restart_alt</span>
 <span>Reset Baseline</span>
 </button>
-{/* Export Stress Dossier Interactive Button */}
-<ExportStressDossierButton />
+<button className="flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-primary-container to-secondary-container text-on-primary-container text-body-sm font-semibold shadow-[0_0_24px_rgba(99,102,241,0.25)] hover:brightness-110 active:scale-[0.98] transition-all">
+<span className="material-symbols-outlined text-[16px]">file_download</span>
+<span>Export Stress Dossier</span>
+</button>
 </div>
 </div>
 {/*  Main 2-Column Institutional Workbench  */}
@@ -172,7 +172,10 @@ export default async function StressLabPage() {
 {/*  Action Bar in Controller  */}
 <div className="mt-10 pt-4 border-t border-border-glass flex flex-col gap-2">
 <div className="flex items-center gap-2">
-<RunScenarioButton />
+<button className="flex-1 py-3 px-4 rounded-xl bg-gradient-to-r from-primary-container via-secondary-container to-inverse-primary text-on-primary font-headline-sm text-body-md font-semibold flex items-center justify-center gap-2 shadow-[0_0_24px_rgba(128,131,255,0.35)] hover:shadow-[0_0_32px_rgba(128,131,255,0.5)] active:scale-[0.99] transition-all" id="runScenarioBtn">
+<span className="material-symbols-outlined text-[18px]">bolt</span>
+<span>Run Scenario Simulation</span>
+</button>
 <button className="p-3 rounded-xl bg-surface-container-high/80 hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface border border-border-glass transition-colors" id="quickResetBtn" title="Revert to baseline state">
 <span className="material-symbols-outlined text-[20px]">rotate_left</span>
 </button>
@@ -302,9 +305,106 @@ export default async function StressLabPage() {
 </div>
 </div>
 </div>
-{/*  Interactive Recharts Chart Canvas  */}
-<div className="pt-4 pb-2 relative">
-  <StressLabChart />
+{/*  SVG Dual Curve Chart Canvas  */}
+<div className="relative w-full h-80 pt-2 pb-1 overflow-hidden select-none">
+<svg className="w-full h-full" fill="none" preserveAspectRatio="none" viewBox="0 0 760 300">
+<defs>
+{/*  Baseline Gradient Fill  */}
+<linearGradient id="gradBaseline" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stopColor="#4cd7f6" stopOpacity="0.25"></stop>
+<stop offset="100%" stopColor="#4cd7f6" stopOpacity="0.0"></stop>
+</linearGradient>
+{/*  Stress Scenario Gradient Fill  */}
+<linearGradient id="gradStress" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stopColor="#F43F5E" stopOpacity="0.30"></stop>
+<stop offset="100%" stopColor="#F43F5E" stopOpacity="0.02"></stop>
+</linearGradient>
+{/*  Breach Danger Zone Glow  */}
+<linearGradient id="dangerHatch" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stopColor="#F43F5E" stopOpacity="0.22"></stop>
+<stop offset="100%" stopColor="#F43F5E" stopOpacity="0.08"></stop>
+</linearGradient>
+</defs>
+{/*  Horizontal Gridlines & Y-Axis Reference  */}
+<line stroke="rgba(255,255,255,0.06)" strokeWidth="1" x1="50" x2="740" y1="30" y2="30"></line>
+<text fill="#908fa0" font-family="JetBrains Mono" font-size="10" text-anchor="end" x="40" y="34">₹3.0L</text>
+<line stroke="rgba(255,255,255,0.06)" strokeWidth="1" x1="50" x2="740" y1="90" y2="90"></line>
+<text fill="#908fa0" font-family="JetBrains Mono" font-size="10" text-anchor="end" x="40" y="94">₹2.0L</text>
+<line stroke="rgba(255,255,255,0.06)" strokeWidth="1" x1="50" x2="740" y1="150" y2="150"></line>
+<text fill="#908fa0" font-family="JetBrains Mono" font-size="10" text-anchor="end" x="40" y="154">₹1.0L</text>
+<line stroke="rgba(255,255,255,0.06)" strokeWidth="1" x1="50" x2="740" y1="210" y2="210"></line>
+<text fill="#908fa0" font-family="JetBrains Mono" font-size="10" text-anchor="end" x="40" y="214">₹0.5L</text>
+<line stroke="rgba(255,255,255,0.12)" strokeWidth="1" x1="50" x2="740" y1="260" y2="260"></line>
+<text fill="#908fa0" font-family="JetBrains Mono" font-size="10" text-anchor="end" x="40" y="264">₹0.0</text>
+{/*  Covenant Line (Threshold ₹65K ~ y: 200)  */}
+<line stroke="#F59E0B" strokeDasharray="6 4" stroke-opacity="0.85" strokeWidth="1.5" x1="50" x2="740" y1="200" y2="200"></line>
+<text fill="#F59E0B" font-family="Inter" font-size="10" font-weight="600" text-anchor="end" x="735" y="194">Min. Payroll / Covenant Floor (₹65,000)</text>
+{/*  Breach Shaded Area (Days 55 - 90: x=460 to 740)  */}
+<rect fill="url(#dangerHatch)" height="60" rx="2" width="275" x="465" y="200"></rect>
+<text fill="#F43F5E" font-family="Inter" font-size="10" font-weight="600" opacity="0.9" x="475" y="250">Breach Zone · Insolvency Exposure</text>
+{/*  Area Fill Baseline  */}
+<path d="M 60 70 
+                     C 140 65, 220 95, 300 90 
+                     C 380 85, 460 120, 540 130 
+                     C 620 140, 680 155, 740 160 
+                     L 740 260 L 60 260 Z" fill="url(#gradBaseline)"></path>
+{/*  Area Fill Stress  */}
+<path d="M 60 70 
+                     C 140 110, 220 135, 300 165 
+                     C 380 195, 460 215, 540 238 
+                     C 600 252, 650 256, 740 248 
+                     L 740 260 L 60 260 Z" fill="url(#gradStress)"></path>
+{/*  Curve 1: Baseline Plan (Teal/Cyan)  */}
+<path d="M 60 70 
+                     C 140 65, 220 95, 300 90 
+                     C 380 85, 460 120, 540 130 
+                     C 620 140, 680 155, 740 160" fill="none" stroke="#4cd7f6" strokeLinecap="round" strokeWidth="2.75"></path>
+{/*  Curve 2: Stress Scenario (Coral Red)  */}
+<path d="M 60 70 
+                     C 140 110, 220 135, 300 165 
+                     C 380 195, 460 215, 540 238 
+                     C 600 252, 650 256, 740 248" fill="none" stroke="#F43F5E" strokeLinecap="round" strokeWidth="3"></path>
+{/*  Key Anchor Points Baseline  */}
+<circle cx="60" cy="70" fill="#4cd7f6" r="4" stroke="#0A0D14" strokeWidth="2"></circle>
+<circle cx="300" cy="90" fill="#4cd7f6" r="4" stroke="#0A0D14" strokeWidth="2"></circle>
+<circle cx="540" cy="130" fill="#4cd7f6" r="4" stroke="#0A0D14" strokeWidth="2"></circle>
+<circle cx="740" cy="160" fill="#4cd7f6" r="4" stroke="#0A0D14" strokeWidth="2"></circle>
+{/*  Key Points Stress  */}
+<circle cx="60" cy="70" fill="#F43F5E" r="4" stroke="#0A0D14" strokeWidth="2"></circle>
+<circle cx="300" cy="165" fill="#F43F5E" r="4" stroke="#0A0D14" strokeWidth="2"></circle>
+<circle cx="490" cy="225" fill="#F43F5E" r="5" stroke="#0A0D14" strokeWidth="2"></circle>
+<circle className="animate-pulse" cx="600" cy="252" fill="#F43F5E" r="6" stroke="#ffffff" strokeWidth="2"></circle>
+{/*  Day 72 Indicator Line  */}
+<line opacity="0.6" stroke="#F43F5E" strokeDasharray="3 3" strokeWidth="1" x1="600" x2="600" y1="30" y2="260"></line>
+{/*  X-Axis Labels  */}
+<text fill="#908fa0" font-family="JetBrains Mono" font-size="11" text-anchor="middle" x="60" y="280">Day 0 (Oct 1)</text>
+<text fill="#908fa0" font-family="JetBrains Mono" font-size="11" text-anchor="middle" x="210" y="280">Day 20</text>
+<text fill="#908fa0" font-family="JetBrains Mono" font-size="11" text-anchor="middle" x="360" y="280">Day 40 (Nov 10)</text>
+<text fill="#908fa0" font-family="JetBrains Mono" font-size="11" text-anchor="middle" x="510" y="280">Day 60 (Nov 30)</text>
+<text fill="#F43F5E" font-family="JetBrains Mono" font-size="11" font-weight="600" text-anchor="middle" x="600" y="280">Day 72 (Dec 12)</text>
+<text fill="#908fa0" font-family="JetBrains Mono" font-size="11" text-anchor="end" x="735" y="280">Day 90 (Dec 30)</text>
+</svg>
+{/*  Interactive Tooltip Overlay on Day 72  */}
+<div className="absolute left-[64%] top-[34%] transform -translate-x-1/2 p-2 rounded-lg bg-surface-overlay/95 border border-semantic-critical/50 backdrop-blur-xl shadow-[0_8px_24px_rgba(244,63,94,0.3)] pointer-events-none max-w-xs">
+<div className="flex items-center justify-between gap-2 border-b border-border-glass pb-1">
+<span className="font-label-caps text-[10px] text-semantic-critical uppercase font-bold flex items-center gap-1">
+<span className="w-1.5 h-1.5 rounded-full bg-semantic-critical"></span>
+                Insolvency Risk Point
+              </span>
+<span className="font-label-metric-md text-[10px] text-on-surface">Day 72</span>
+</div>
+<div className="mt-1 flex flex-col gap-0.5">
+<div className="flex items-baseline justify-between gap-4">
+<span className="font-body-sm text-body-sm text-outline">Projected Cash:</span>
+<span className="font-label-metric-md text-label-metric-md text-semantic-critical font-bold">₹42,180</span>
+</div>
+<div className="flex items-baseline justify-between gap-4">
+<span className="font-body-sm text-body-sm text-outline">Deficit below floor:</span>
+<span className="font-label-metric-md text-[11px] text-semantic-critical">-₹22,820</span>
+</div>
+<div className="font-body-sm text-[10px] text-outline pt-0.5">Statutory vendor &amp; GST challan due date</div>
+</div>
+</div>
 </div>
 <div className="flex items-center justify-between pt-1 text-outline text-body-sm">
 <span className="flex items-center gap-1 text-xs">
@@ -379,7 +479,7 @@ export default async function StressLabPage() {
 </div>
 </div>
 {/*  Interactive Client-side Script for Micro-Interactions  */}
-{/*  Script block removed for React conversion  */}
+
 
     </div>
   );

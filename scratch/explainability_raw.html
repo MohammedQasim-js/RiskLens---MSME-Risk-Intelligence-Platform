@@ -1,0 +1,481 @@
+<!DOCTYPE html><html class="dark" lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Inter:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-lowest":"#0b0e15","secondary-container":"#571bc1","border-glass":"rgba(255, 255, 255, 0.08)","surface-base":"#0A0D14","on-secondary-fixed":"#23005c","on-error-container":"#ffdad6","inverse-primary":"#494bd6","on-primary-fixed":"#07006c","surface-overlay":"#141B2D","primary-fixed":"#e1e0ff","glass-fill-hover":"rgba(20, 27, 45, 0.80)","tertiary-container":"#009eb9","surface":"#10131a","on-secondary-fixed-variant":"#5516be","surface-variant":"#32353d","on-primary":"#1000a9","on-surface":"#e1e2ec","secondary-fixed":"#e9ddff","on-background":"#e1e2ec","semantic-success":"#10B981","accent-electric":"#38BDF8","glass-fill":"rgba(15, 20, 34, 0.65)","surface-container-highest":"#32353d","on-tertiary-fixed-variant":"#004e5c","on-primary-container":"#0d0096","border-glass-strong":"rgba(255, 255, 255, 0.16)","surface-container":"#1d1f27","surface-tint":"#c0c1ff","primary":"#c0c1ff","background":"#10131a","primary-fixed-dim":"#c0c1ff","surface-dim":"#10131a","on-error":"#690005","semantic-warning":"#F59E0B","on-surface-variant":"#c7c4d7","on-tertiary-container":"#002f38","on-tertiary":"#003640","tertiary-fixed":"#acedff","error-container":"#93000a","tertiary-fixed-dim":"#4cd7f6","surface-bright":"#363941","outline-variant":"#464554","error":"#ffb4ab","surface-container-low":"#191b23","semantic-critical":"#F43F5E","secondary-fixed-dim":"#d0bcff","on-secondary":"#3c0091","on-secondary-container":"#c4abff","on-primary-fixed-variant":"#2f2ebe","surface-container-high":"#272a32","surface-raised":"#0F1422","on-tertiary-fixed":"#001f26","tertiary":"#4cd7f6","outline":"#908fa0","inverse-surface":"#e1e2ec","inverse-on-surface":"#2d3038","secondary":"#d0bcff","primary-container":"#8083ff"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"gutter-mobile":"0.75rem","space-sm":"0.5rem","margin-mobile":"1rem","space-lg":"1.5rem","space-xl":"2.5rem",margin:"2rem",gutter:"1.25rem","space-xs":"0.25rem","space-md":"1rem"},fontFamily:{"body-lg":["Inter"],"label-caps":["Inter"],"display-lg":["Geist"],"body-sm":["Inter"],"body-md":["Inter"],"label-metric-md":["JetBrains Mono"],"headline-md":["Geist"],"headline-xl-mobile":["Geist"],"display-lg-mobile":["Geist"],"label-metric-lg":["JetBrains Mono"],"headline-xl":["Geist"],"headline-lg":["Geist"],"headline-sm":["Geist"]},fontSize:{"body-lg":["16px",{lineHeight:"24px",letterSpacing:"-0.01em",fontWeight:"400"}],"label-caps":["11px",{lineHeight:"16px",letterSpacing:"0.06em",fontWeight:"600"}],"display-lg":["48px",{lineHeight:"56px",letterSpacing:"-0.03em",fontWeight:"600"}],"body-sm":["12px",{lineHeight:"18px",letterSpacing:"0.01em",fontWeight:"400"}],"body-md":["14px",{lineHeight:"20px",letterSpacing:"0em",fontWeight:"400"}],"label-metric-md":["14px",{lineHeight:"20px",letterSpacing:"0em",fontWeight:"500"}],"headline-md":["22px",{lineHeight:"30px",letterSpacing:"-0.015em",fontWeight:"500"}],"headline-xl-mobile":["26px",{lineHeight:"34px",letterSpacing:"-0.02em",fontWeight:"600"}],"display-lg-mobile":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"600"}],"label-metric-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.02em",fontWeight:"500"}],"headline-xl":["36px",{lineHeight:"44px",letterSpacing:"-0.025em",fontWeight:"600"}],"headline-lg":["28px",{lineHeight:"36px",letterSpacing:"-0.02em",fontWeight:"600"}],"headline-sm":["18px",{lineHeight:"26px",letterSpacing:"-0.01em",fontWeight:"500"}]}}}};</script><style>
+@font-face {
+  font-family: 'Inter var';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url("chrome-extension://neabdmkliomokekhgnogbeonopbjmajc/content/Inter-roman.var.woff2?v=3.19") format("woff2");
+}
+@font-face {
+  font-family: 'Inter var';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+  font-named-instance: 'Italic';
+  src: url("chrome-extension://neabdmkliomokekhgnogbeonopbjmajc/content/Inter-italic.var.woff2?v=3.19") format("woff2");
+}
+</style></head><body class="bg-surface-base font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-lowest/90 backdrop-blur-2xl z-50 flex flex-col justify-between border-r border-border-glass shadow-[0_8px_32px_-4px_rgba(0,0,0,0.45)]"><div class="flex flex-col flex-1 overflow-y-auto"><div class="h-16 px-space-md flex items-center justify-between border-b border-border-glass"><div class="flex items-center gap-space-sm"><img alt="RiskLens MRIP Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UvG8Yk7CY-ssJoe1p7NbQGWzQrOH4cH06gKF0H_NC4iHpkoQyLimYy2dZsuz1wjyRURVQimQLQVDXiARAlxi4fuYDeon6d70jbeiwgrNUtKiNHHaXP7RC5mgZb6bS0iqB1jY-uQTHA335qgctiZyNfdRKNVKMiqaPbjeTNlumfqguFzI2R9StY2vWAYqMLneE0qo2UEV5x0qboheUvxfJ04-UBV9r6Aj5Mqx1xvSaEjdrlsly9aGeGOm3A"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">RiskLens</span><span class="font-label-caps text-label-caps text-tertiary tracking-wider uppercase">MRIP Engine</span></div></div><span class="px-space-xs py-0.5 rounded-full bg-secondary-container/30 border border-secondary-container/50 text-secondary font-label-caps text-label-caps">v3.8</span></div><div class="px-space-md py-space-sm"><div class="px-space-sm py-space-xs font-label-caps text-label-caps text-outline uppercase tracking-wider">Intelligence Suites</div><nav class="flex flex-col gap-1 mt-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-medium rounded-xl shadow-[0_0_20px_rgba(99,102,241,0.25)]"><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200 font-body-md text-body-md" data-path="overview" href="#">Overview</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200 font-body-md text-body-md" data-path="cash-flow" href="#">Cash Flow</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200 font-body-md text-body-md" data-path="plan-vs-actual" href="#">Plan vs Actual</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200 font-body-md text-body-md" data-path="forecast" href="#">Forecast</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200 font-body-md text-body-md" data-path="stress-lab" href="#">Stress Lab</a><a aria-current="page" class="flex items-center px-space-md py-space-sm transition-all duration-200 bg-primary-container text-on-primary-container font-medium rounded-xl shadow-[0_0_20px_rgba(99,102,241,0.25)]" data-path="explainability" href="#">Explainability</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200 font-body-md text-body-md" data-path="model-lab" href="#">Model Lab &amp; Fairness</a><a class="flex items-center pl-space-xl pr-space-md py-1.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200 font-body-sm text-body-sm" data-path="fairness" href="#">↳ Fairness Evaluation</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200 font-body-md text-body-md" data-path="report" href="#">Report</a></nav></div></div><div class="p-space-md flex flex-col gap-space-sm border-t border-border-glass bg-surface-container-low/40"><div class="p-space-sm rounded-lg bg-surface-container/60 border border-border-glass flex flex-col gap-1"><div class="flex items-center justify-between"><span class="font-label-caps text-label-caps text-semantic-success flex items-center gap-1.5"><span class="inline-block w-1.5 h-1.5 rounded-full bg-semantic-success animate-pulse"></span>RBI / AA Protocol Enclave</span><span class="material-symbols-outlined text-[14px] text-semantic-success">verified_user</span></div><span class="font-body-sm text-body-sm text-outline-variant text-[11px]">Tier-1 End-to-End Encryption</span></div><div class="flex items-center justify-between pt-1"><a class="flex items-center gap-1.5 text-on-surface-variant hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="settings" href="#"><span class="material-symbols-outlined text-[18px]">settings</span><span>Settings</span></a><a class="flex items-center gap-1.5 text-on-surface-variant hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="support" href="#"><span class="material-symbols-outlined text-[18px]">contact_support</span><span>Support</span></a><div class="flex items-center gap-1.5 text-on-surface-variant font-label-caps text-label-caps"><span class="w-2 h-2 rounded-full bg-semantic-success"></span><span>Active</span></div></div></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/80 backdrop-blur-xl z-40 border-b border-border-glass shadow-[0_4px_24px_-2px_rgba(0,0,0,0.35)] px-margin flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm px-space-md py-1.5 rounded-xl bg-surface-container-low/80 border border-border-glass hover:border-accent-electric/40 transition-all cursor-pointer"><div class="flex flex-col text-left"><div class="flex items-center gap-2"><span class="font-body-md text-body-md font-semibold text-on-surface">Aarav Packaging Pvt Ltd</span><span class="px-1.5 py-0.5 rounded bg-tertiary-container/20 text-tertiary border border-tertiary-container/30 font-label-caps text-label-caps">MSME</span></div><span class="font-body-sm text-body-sm text-outline">Manufacturing · Mumbai Plant 1</span></div><span class="material-symbols-outlined text-outline text-[18px]">unfold_more</span></div><div class="hidden xl:flex items-center gap-space-sm pl-space-xs"><div class="flex items-center gap-2 px-space-md py-1 rounded-full bg-surface-container-high/60 border border-border-glass"><span class="w-2 h-2 rounded-full bg-semantic-success shadow-[0_0_8px_#10B981]"></span><span class="font-label-metric-md text-label-metric-md text-on-surface-variant text-[12px]">Updated Today, Sep 30, 2026</span></div><div class="flex items-center gap-2 px-space-md py-1 rounded-full bg-primary-container/10 border border-primary-container/30"><span class="material-symbols-outlined text-[16px] text-tertiary">speed</span><span class="font-body-sm text-body-sm text-primary">Data Confidence: <strong class="font-label-metric-md text-label-metric-md text-on-surface">86/100</strong> (High-quality evidence)</span></div></div></div><div class="flex items-center gap-space-md"><button aria-label="Notifications" class="relative p-2 rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/80 transition-colors border border-transparent hover:border-border-glass" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-semantic-critical ring-2 ring-surface-container-lowest"></span></button><div class="h-7 w-px bg-border-glass hidden sm:block"></div><div class="flex items-center gap-space-sm cursor-pointer"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-border-glass-strong" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrXVdUb7V5AO26OCq7Vc4QVBfgBUO2__p2E7em2Lg_BF4Wq94AXjkOiggKzyKoAzH2QjutBL1c1gURjCBfiVztv_hilKUOCUPLTITJNyjd5nlwOvWesfv4U3Kr-Phc0_7WluXPbKagLl28i8_XOTfrcDAb41gPsc6gTuW5ZhGAH7fhHyafDNQwfMVu3nYL6O0wXGEviGGHeOTTTHGESNtuEtmtYivnCAdOVbzZvw_3wKuBL21LG970rQ"><div class="hidden lg:flex flex-col text-right"><span class="font-body-md text-body-md font-medium text-on-surface leading-tight">Priya Sharma</span><span class="font-body-sm text-body-sm text-outline text-[11px] leading-tight">Chief Risk Officer / Finance Lead</span></div></div></div></header><main class="w-full pt-16 bg-surface-base flex-1"><div class="flex flex-col w-full px-margin py-space-lg space-y-space-lg">
+<!-- Header & Context Banner -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-primary-container/20 text-primary font-label-caps text-label-caps uppercase tracking-wider">Explainability Studio</span>
+<span class="text-outline text-body-sm">/</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Root-Cause Lineage</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight font-semibold">Why is the model saying this?</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+        Every major risk signal is connected to measurable business evidence, grounded in deterministic TreeSHAP attribution and audited Account Aggregator telemetry.
+      </p>
+</div>
+<!-- Sovereign Model Verification Chipset -->
+<div class="flex flex-wrap items-center gap-space-sm bg-surface-container-low/60 p-space-sm rounded-xl border-none">
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container/90">
+<span class="material-symbols-outlined text-accent-electric text-[18px]">neurology</span>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-outline">Engine Architecture</span>
+<span class="font-label-metric-md text-label-metric-md text-on-surface text-[12px]">GBM v0.3 (Multi-Vector)</span>
+</div>
+</div>
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container/90">
+<span class="material-symbols-outlined text-semantic-warning text-[18px]">troubleshoot</span>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-outline">Predictor Target</span>
+<span class="font-label-metric-md text-label-metric-md text-semantic-warning text-[12px]">PD 8.2% · Moderate</span>
+</div>
+</div>
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container/90">
+<span class="material-symbols-outlined text-semantic-success text-[18px]">verified</span>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-outline">AA Consensus</span>
+<span class="font-label-metric-md text-label-metric-md text-tertiary text-[12px]">#MRIP-XAI-8812</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Telemetry Calibration Bar -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-sm p-space-md rounded-xl bg-surface-container-lowest/80 shadow-md">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">calendar_clock</span>
+</div>
+<div>
+<div class="font-label-caps text-label-caps text-outline">Calibrated On</div>
+<div class="font-label-metric-md text-label-metric-md text-on-surface">Sep 30, 2026 · Daily Close</div>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+</div>
+<div>
+<div class="font-label-caps text-label-caps text-outline">Audit Coverage</div>
+<div class="font-label-metric-md text-label-metric-md text-on-surface">96.4% Ledger + GST Recon</div>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-semantic-success">
+<span class="material-symbols-outlined text-[20px]">database</span>
+</div>
+<div>
+<div class="font-label-caps text-label-caps text-outline">Data Confidence Base</div>
+<div class="font-label-metric-md text-label-metric-md text-semantic-success">86/100 (Tier-1 Verifiable)</div>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">hub</span>
+</div>
+<div>
+<div class="font-label-caps text-label-caps text-outline">XAI Method</div>
+<div class="font-label-metric-md text-label-metric-md text-on-surface">Exact TreeSHAP Additive</div>
+</div>
+</div>
+</div>
+<!-- Section 1: Deterministic Horizontal Contribution Visualization (SHAP Waterfall Spectrum) -->
+<div class="p-space-lg rounded-xl bg-surface-container/70 shadow-lg space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-xs">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Model Feature Drivers &amp; Marginal PD Attribution</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Bidirectional attribution shows each feature's divergence from the MSME industry baseline of 6.2% PD.</p>
+</div>
+<!-- Legend -->
+<div class="flex items-center gap-4 text-body-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-semantic-critical"></span>
+<span class="text-on-surface-variant font-label-caps text-label-caps">Risk-Increasing (+)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-semantic-success"></span>
+<span class="text-on-surface-variant font-label-caps text-label-caps">Risk-Mitigating Buffers (−)</span>
+</div>
+</div>
+</div>
+<!-- Attribution Chart Bars -->
+<div class="space-y-space-sm pt-space-xs">
+<!-- Item 1: DSO (Top active driver) -->
+<div class="p-space-sm rounded-xl bg-surface-container-high/80 transition-all cursor-pointer shadow-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-2">
+<div class="flex items-center gap-2.5">
+<span class="px-2 py-0.5 rounded bg-semantic-critical/20 text-semantic-critical font-label-caps text-label-caps">Rank #1</span>
+<span class="font-body-md text-body-md font-semibold text-on-surface">Receivable Days (DSO Latency)</span>
+<span class="text-outline text-body-sm font-label-metric-md">47.2 Days vs 32.0 Target</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-label-metric-md text-label-metric-md text-semantic-critical font-bold">+3.1% PD Impact (+++)</span>
+<span class="px-2.5 py-1 rounded-lg bg-primary-container text-on-primary-container font-label-caps text-label-caps shadow-sm flex items-center gap-1">
+<span>Selected Driver</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</span>
+</div>
+</div>
+<!-- Bidirectional Bar Container -->
+<div class="grid grid-cols-2 gap-1 items-center h-4 rounded-md bg-surface-base/80 p-0.5">
+<div class="flex justify-end pr-1">
+<span class="text-[10px] text-outline-variant font-label-metric-md mr-auto">Buffer</span>
+</div>
+<div class="flex items-center">
+<div class="h-2.5 rounded-r-sm bg-gradient-to-r from-semantic-warning to-semantic-critical w-[78%]"></div>
+<span class="ml-2 text-[10px] text-semantic-critical font-label-metric-md">+3.10%</span>
+</div>
+</div>
+</div>
+<!-- Item 2: Cash Buffer Runway -->
+<div class="p-space-sm rounded-xl bg-surface-container-low/70 hover:bg-surface-container-high/50 transition-all cursor-pointer">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-2">
+<div class="flex items-center gap-2.5">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-label-caps text-label-caps">Rank #2</span>
+<span class="font-body-md text-body-md font-medium text-on-surface">Cash Buffer Runway (24 Days)</span>
+<span class="text-outline text-body-sm font-label-metric-md">Threshold 30d Baseline</span>
+</div>
+<span class="font-label-metric-md text-label-metric-md text-semantic-warning font-semibold">+1.8% PD Impact (++)</span>
+</div>
+<div class="grid grid-cols-2 gap-1 items-center h-4 rounded-md bg-surface-base/80 p-0.5">
+<div></div>
+<div class="flex items-center">
+<div class="h-2.5 rounded-r-sm bg-semantic-warning w-[45%]"></div>
+<span class="ml-2 text-[10px] text-semantic-warning font-label-metric-md">+1.80%</span>
+</div>
+</div>
+</div>
+<!-- Item 3: Customer Concentration -->
+<div class="p-space-sm rounded-xl bg-surface-container-low/70 hover:bg-surface-container-high/50 transition-all cursor-pointer">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-2">
+<div class="flex items-center gap-2.5">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-label-caps text-label-caps">Rank #3</span>
+<span class="font-body-md text-body-md font-medium text-on-surface">Customer Concentration (Top 2 = 62.5%)</span>
+<span class="text-outline text-body-sm font-label-metric-md">Automotive Ancillary Bias</span>
+</div>
+<span class="font-label-metric-md text-label-metric-md text-semantic-warning font-semibold">+1.4% PD Impact (+)</span>
+</div>
+<div class="grid grid-cols-2 gap-1 items-center h-4 rounded-md bg-surface-base/80 p-0.5">
+<div></div>
+<div class="flex items-center">
+<div class="h-2.5 rounded-r-sm bg-semantic-warning/90 w-[35%]"></div>
+<span class="ml-2 text-[10px] text-semantic-warning font-label-metric-md">+1.40%</span>
+</div>
+</div>
+</div>
+<!-- Item 4: DSCR (Mitigant / Green) -->
+<div class="p-space-sm rounded-xl bg-surface-container-low/70 hover:bg-surface-container-high/50 transition-all cursor-pointer">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-2">
+<div class="flex items-center gap-2.5">
+<span class="px-2 py-0.5 rounded bg-semantic-success/20 text-semantic-success font-label-caps text-label-caps">Mitigant #1</span>
+<span class="font-body-md text-body-md font-medium text-on-surface">Debt-Service Coverage Ratio (1.82x)</span>
+<span class="text-outline text-body-sm font-label-metric-md">Healthy Service Cushion (&gt;1.35x)</span>
+</div>
+<span class="font-label-metric-md text-label-metric-md text-semantic-success font-semibold">−2.1% PD Impact (−−)</span>
+</div>
+<div class="grid grid-cols-2 gap-1 items-center h-4 rounded-md bg-surface-base/80 p-0.5">
+<div class="flex items-center justify-end">
+<span class="mr-2 text-[10px] text-semantic-success font-label-metric-md">−2.10%</span>
+<div class="h-2.5 rounded-l-sm bg-semantic-success w-[52%]"></div>
+</div>
+<div></div>
+</div>
+</div>
+<!-- Item 5: Plan Attainment Drag -->
+<div class="p-space-sm rounded-xl bg-surface-container-low/70 hover:bg-surface-container-high/50 transition-all cursor-pointer">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-2">
+<div class="flex items-center gap-2.5">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-label-caps text-label-caps">Rank #4</span>
+<span class="font-body-md text-body-md font-medium text-on-surface">Operating Plan Attainment (89.2%)</span>
+<span class="text-outline text-body-sm font-label-metric-md">Mild Q2 Revenue Under-run</span>
+</div>
+<span class="font-label-metric-md text-label-metric-md text-semantic-warning font-semibold">+0.6% PD Impact (+)</span>
+</div>
+<div class="grid grid-cols-2 gap-1 items-center h-4 rounded-md bg-surface-base/80 p-0.5">
+<div></div>
+<div class="flex items-center">
+<div class="h-2.5 rounded-r-sm bg-semantic-warning/70 w-[15%]"></div>
+<span class="ml-2 text-[10px] text-semantic-warning font-label-metric-md">+0.60%</span>
+</div>
+</div>
+</div>
+<!-- Item 6: GST e-Way Bill Regularity -->
+<div class="p-space-sm rounded-xl bg-surface-container-low/70 hover:bg-surface-container-high/50 transition-all cursor-pointer">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-2">
+<div class="flex items-center gap-2.5">
+<span class="px-2 py-0.5 rounded bg-semantic-success/20 text-semantic-success font-label-caps text-label-caps">Mitigant #2</span>
+<span class="font-body-md text-body-md font-medium text-on-surface">GST e-Way Bill Filing Regularity (98.4%)</span>
+<span class="text-outline text-body-sm font-label-metric-md">Consistently On-Time Filings</span>
+</div>
+<span class="font-label-metric-md text-label-metric-md text-semantic-success font-semibold">−1.2% PD Impact (−)</span>
+</div>
+<div class="grid grid-cols-2 gap-1 items-center h-4 rounded-md bg-surface-base/80 p-0.5">
+<div class="flex items-center justify-end">
+<span class="mr-2 text-[10px] text-semantic-success font-label-metric-md">−1.20%</span>
+<div class="h-2.5 rounded-l-sm bg-semantic-success/80 w-[30%]"></div>
+</div>
+<div></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 2: Two-Column Integrated Deep Dive & Telemetry Evidence Drawer -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- Left Column: Selected Driver Deep Dive (7 cols) -->
+<div class="xl:col-span-7 space-y-space-md">
+<!-- Header Card with Core KPIs -->
+<div class="p-space-lg rounded-xl bg-surface-container-low/90 shadow-lg space-y-space-md">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-semantic-critical uppercase tracking-wider">Driver Focus #01</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface font-semibold">Receivable Delay &amp; Cash Conversion Elongation</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Deterministic evaluation across Aarav Packaging GSTR-1 and HDFC banking receipts.</p>
+</div>
+<div class="p-2.5 rounded-xl bg-surface-container-high text-accent-electric">
+<span class="material-symbols-outlined text-[24px]">receipt_long</span>
+</div>
+</div>
+<!-- 4 Metric Bento Grid -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm pt-space-xs">
+<div class="p-space-sm rounded-lg bg-surface-container/70 flex flex-col">
+<span class="font-label-caps text-label-caps text-outline">Weighted DSO</span>
+<span class="font-label-metric-lg text-label-metric-lg text-semantic-critical font-bold">47 Days</span>
+<span class="font-body-sm text-body-sm text-semantic-warning">+15d over target</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container/70 flex flex-col">
+<span class="font-label-caps text-label-caps text-outline">Trapped Receivables</span>
+<span class="font-label-metric-lg text-label-metric-lg text-on-surface font-bold">₹3.80L</span>
+<span class="font-body-sm text-body-sm text-outline">Total Book: ₹10.7L</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container/70 flex flex-col">
+<span class="font-label-caps text-label-caps text-outline">Delinquent Share</span>
+<span class="font-label-metric-lg text-label-metric-lg text-semantic-critical font-bold">42.0%</span>
+<span class="font-body-sm text-body-sm text-outline">Bajaj Tier-2 Cluster</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container/70 flex flex-col">
+<span class="font-label-caps text-label-caps text-outline">Aging Drift</span>
+<span class="font-label-metric-lg text-label-metric-lg text-semantic-warning font-bold">+4.2d</span>
+<span class="font-body-sm text-body-sm text-outline">MoM elongation</span>
+</div>
+</div>
+<!-- Contextual Visual: Plant Logistics & Physical Verification (Image Placeholder 1) -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container h-44 shadow-inner">
+<img class="w-full h-full object-cover opacity-60 mix-blend-luminosity hover:opacity-80 transition-opacity duration-300" data-alt="High tech corrugated carton manufacturing factory floor with precision packaging machines, organized pallet racking, and digital IoT sensor tags glowing with ambient indigo and teal indicators in Mumbai, cinematic institutional lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZ7s-QH93zhwnYMpYsya6qlv8WCAqwIB9CQFaDNtddwa_sg63gEflb_8tu5WeHJN983tucJJP-VSNvhPhmQNYyS9NfRMzZW-WKMLI-0hR3Lc-tiy_nsfIKr-A7NIfmBhjyQXkcXVwWCNRDxpvI3GS66r9qCTl3eGzfsCkKKQPSW2YzPyFbPRSNI23-ab0dArqc6jMcDG6wLLHYp6wQ46w1C5m7xOqfqeva_RyuJ2sxS_4XvZMzpcqXEA">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-base via-surface-base/40 to-transparent p-space-md flex flex-col justify-end">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-tertiary">Field IoT &amp; E-Way Match</span>
+<p class="font-body-sm text-body-sm text-on-surface">Mumbai Plant 1 Physical Dispatch confirms 98.4% completed output match vs billings.</p>
+</div>
+<span class="px-2 py-1 rounded bg-surface-base/80 text-semantic-success font-label-caps text-label-caps">Telemetry Synced</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Actionable Guidance Card: "What could improve this signal?" -->
+<div class="p-space-lg rounded-xl bg-surface-container-high/90 shadow-md space-y-space-md">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-[22px]">lightbulb</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Remediation Pathways: What could improve this signal?</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Model simulations project PD variance based on tangible balance sheet or operational adjustments:
+        </p>
+<div class="space-y-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm hover:bg-surface-container transition-colors">
+<span class="w-7 h-7 rounded-full bg-primary-container/20 text-primary flex items-center justify-center font-label-metric-md text-[13px] shrink-0 font-bold">1</span>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md font-medium text-on-surface">Accelerate invoice discounting on TReDS Platform</span>
+<span class="font-label-metric-md text-label-metric-md text-semantic-success font-semibold">−1.4% PD Potential</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline pt-0.5">Factor ₹2.4L in verified Tier-1 OEM invoices to immediately drop DSO from 47d to 33d.</p>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm hover:bg-surface-container transition-colors">
+<span class="w-7 h-7 rounded-full bg-primary-container/20 text-primary flex items-center justify-center font-label-metric-md text-[13px] shrink-0 font-bold">2</span>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md font-medium text-on-surface">Retain Q3 Operating Surplus Buffer</span>
+<span class="font-label-metric-md text-label-metric-md text-semantic-success font-semibold">−0.9% PD Potential</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline pt-0.5">Maintain ₹1.20L unencumbered cash sweep reserve in primary HDFC current facility.</p>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm hover:bg-surface-container transition-colors">
+<span class="w-7 h-7 rounded-full bg-primary-container/20 text-primary flex items-center justify-center font-label-metric-md text-[13px] shrink-0 font-bold">3</span>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md font-medium text-on-surface">Diversify client inflows away from single OEM cluster</span>
+<span class="font-label-metric-md text-label-metric-md text-semantic-success font-semibold">−0.7% PD Potential</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline pt-0.5">Expand non-automotive FMCG carton order book share above 40% threshold.</p>
+</div>
+</div>
+</div>
+<!-- Mandatory Explainability Disclaimer -->
+<div class="p-space-sm rounded-lg bg-surface-base/90 flex items-start gap-space-sm text-outline">
+<span class="material-symbols-outlined text-[16px] text-outline mt-0.5 shrink-0">info</span>
+<span class="font-body-sm text-body-sm text-[11px] leading-relaxed">
+<strong>Mandatory Regulatory XAI Protocol:</strong> Associated with model output — not proof of causation. Statistical feature importance calculated via TreeSHAP under verifiable ledger constraints. Past collection velocity does not guarantee forward payment liquidation.
+          </span>
+</div>
+</div>
+</div>
+<!-- Right Column: Evidence Drawer (Ledger & Bank Feed Aggregation) (5 cols) -->
+<div class="xl:col-span-5 space-y-space-md">
+<div class="p-space-lg rounded-xl bg-surface-container/95 shadow-2xl space-y-space-md">
+<!-- Drawer Header with State Badge -->
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-semantic-critical shadow-[0_0_8px_#F43F5E]"></span>
+<span class="font-label-caps text-label-caps text-on-surface uppercase tracking-wider font-semibold">Evidence Ledger Terminal</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-tertiary font-label-caps text-label-caps">Live Consensus Feed</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">Aggregated Financial Evidence</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Driver #01: DSO &amp; Overdue Receivables Trace</p>
+</div>
+<!-- Overdue Summary Metric Slate -->
+<div class="p-space-md rounded-xl bg-surface-container-low space-y-space-sm">
+<div class="flex justify-between items-baseline">
+<span class="font-body-sm text-body-sm text-outline">Overdue Trapped Invoices</span>
+<span class="font-label-metric-lg text-label-metric-lg text-semantic-critical font-bold">₹3,80,000</span>
+</div>
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-outline">Portfolio Share:</span>
+<span class="font-label-metric-md text-on-surface">35.5% of total billed ledger</span>
+</div>
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-outline">Transaction Volume:</span>
+<span class="font-label-metric-md text-on-surface">14 unpaid invoices across 3 buyers</span>
+</div>
+<!-- Mini Progress Track -->
+<div class="w-full bg-surface-base h-2 rounded-full overflow-hidden flex">
+<div class="bg-semantic-critical h-full" style="width: 35.5%"></div>
+<div class="bg-semantic-warning h-full" style="width: 22.0%"></div>
+<div class="bg-semantic-success h-full" style="width: 42.5%"></div>
+</div>
+<div class="flex justify-between text-[10px] text-outline font-label-caps">
+<span>Overdue (35.5%)</span>
+<span>Grace Period (22%)</span>
+<span>Current (42.5%)</span>
+</div>
+</div>
+<!-- Trend Sparkline: 6-Month Velocity Drift -->
+<div class="p-space-md rounded-xl bg-surface-container-low space-y-space-sm">
+<div class="flex justify-between items-center">
+<span class="font-label-caps text-label-caps text-outline uppercase">6-Month DSO Latency Drift</span>
+<span class="font-label-metric-md text-label-metric-md text-semantic-warning">34d → 47d (+38.2%)</span>
+</div>
+<!-- Inline Visual SVG Sparkline Chart -->
+<div class="w-full h-24 pt-2">
+<svg class="w-full h-full overflow-visible" viewBox="0 0 320 70">
+<defs>
+<linearGradient id="dsoGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#F43F5E" stop-opacity="0.35"></stop>
+<stop offset="100%" stop-color="#F43F5E" stop-opacity="0.0"></stop>
+</linearGradient>
+</defs>
+<!-- Target Baseline (32 Days) -->
+<line class="text-outline-variant" stroke="currentColor" stroke-dasharray="3 3" stroke-width="1.5" x1="10" x2="310" y1="52" y2="52"></line>
+<text class="text-outline text-[9px] font-label-metric-md" fill="currentColor" x="14" y="47">PLAN TARGET: 32d</text>
+<!-- Filled Area -->
+<polygon fill="url(#dsoGradient)" points="20,48 70,44 125,38 180,34 235,26 295,12 295,65 20,65"></polygon>
+<!-- Polyline -->
+<polyline fill="none" points="20,48 70,44 125,38 180,34 235,26 295,12" stroke="#F43F5E" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></polyline>
+<!-- Data Points with values -->
+<circle class="fill-surface-base stroke-semantic-warning" cx="20" cy="48" r="3.5" stroke-width="2"></circle>
+<circle class="fill-surface-base stroke-semantic-warning" cx="70" cy="44" r="3.5" stroke-width="2"></circle>
+<circle class="fill-surface-base stroke-semantic-warning" cx="125" cy="38" r="3.5" stroke-width="2"></circle>
+<circle class="fill-surface-base stroke-semantic-warning" cx="180" cy="34" r="3.5" stroke-width="2"></circle>
+<circle class="fill-surface-base stroke-semantic-critical" cx="235" cy="26" r="3.5" stroke-width="2"></circle>
+<circle class="fill-semantic-critical stroke-surface-base" cx="295" cy="12" r="4.5" stroke-width="2"></circle>
+<!-- Labels -->
+<text class="text-outline text-[9px] font-label-metric-md" fill="currentColor" x="13" y="66">Apr:34d</text>
+<text class="text-outline text-[9px] font-label-metric-md" fill="currentColor" x="63" y="66">May:36d</text>
+<text class="text-outline text-[9px] font-label-metric-md" fill="currentColor" x="118" y="66">Jun:39d</text>
+<text class="text-outline text-[9px] font-label-metric-md" fill="currentColor" x="173" y="66">Jul:41d</text>
+<text class="text-outline text-[9px] font-label-metric-md" fill="currentColor" x="228" y="66">Aug:44d</text>
+<text class="text-semantic-critical text-[10px] font-label-metric-md font-bold" fill="currentColor" x="282" y="66">Sep:47d</text>
+</svg>
+</div>
+</div>
+<!-- Plan Assumption Latency Breach Warning -->
+<div class="p-space-sm rounded-lg bg-surface-container-high/60 space-y-1">
+<div class="flex items-center gap-2 text-semantic-warning">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+<span class="font-body-md text-body-md font-medium text-on-surface">Relevant Plan Assumption Breach</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant pl-6">
+            Aarav Packaging FY26 operating plan committed to a <strong>32-day DSO ceiling</strong>. The current 47-day realization represents a <strong>+46.8% latency breach</strong>, directly causing the +3.1% PD risk score amplification.
+          </p>
+</div>
+<!-- Verified AA Evidence Cryptographic Tokens -->
+<div class="space-y-space-xs pt-space-xs">
+<span class="font-label-caps text-label-caps text-outline uppercase">Cryptographic Audit Tokens</span>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-semantic-success text-[18px]">lock</span>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-medium text-on-surface">GSTR-1 Token #GST-8849</span>
+<span class="font-label-caps text-label-caps text-outline">State GSTN Gateway Digest</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container text-semantic-success font-label-caps text-label-caps">Verified</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">account_balance</span>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-medium text-on-surface">HDFC Current A/C #9012</span>
+<span class="font-label-caps text-label-caps text-outline">Auto-Sweep Consensus Node</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container text-semantic-success font-label-caps text-label-caps">Verified</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">token</span>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-medium text-on-surface">TReDS Factor Token #TR-4410</span>
+<span class="font-label-caps text-label-caps text-outline">RXIL Exchange Clearing Hash</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container text-semantic-success font-label-caps text-label-caps">Verified</span>
+</div>
+</div>
+<!-- Terminal Verification Image Placeholder (Image Placeholder 2) -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container h-32">
+<img class="w-full h-full object-cover opacity-50 mix-blend-luminosity" data-alt="Financial data analyst examining real time ledger consensus and encryption keys on futuristic dual monitor interface, dark terminal aesthetics with soft purple and blue ambient glowing numbers." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOvrisAdQigumEGnpD9R6nSS5QyEHc52ippCqM7PMXiwhUyOdpujvvMburNoMOfBmJlJN8BndFNYZxE87vjL6SV29SaJTyqPw8VjW_xbGiXt-eSB7hS5-hpFmF1dM1TZJ7f64Zou_XDv4DzC557V1HsqnMEHlW2ukXI2hyCqy8fwh7l0xQzIQPWH5WdmZZ_9G1b8DYTh02Bcr8o8wtysTjiiBUi_mPb0hXpMu9quVhPULaeHuK3VFiuA">
+<div class="absolute inset-0 bg-gradient-to-r from-surface-base via-transparent to-surface-base/80 p-space-sm flex items-end">
+<span class="font-body-sm text-body-sm text-outline-variant text-[11px]">Audit signature key validated by Reserve Bank of India Account Aggregator framework.</span>
+</div>
+</div>
+<!-- Export Evidence Dossier Button -->
+<button class="w-full py-2.5 rounded-xl bg-gradient-to-r from-primary-container to-secondary-container text-on-primary-container font-body-md text-body-md font-medium hover:brightness-110 shadow-lg flex items-center justify-center gap-2 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">download_for_offline</span>
+<span>Export Verifiable XAI Audit Dossier</span>
+</button>
+</div>
+</div>
+</div>
+</div></main></div></body></html>
