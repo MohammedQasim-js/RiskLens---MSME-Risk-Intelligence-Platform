@@ -42,7 +42,7 @@ export default async function StressLabPage() {
 <div className="flex items-center gap-2 flex-wrap">
 <div className="relative flex items-center">
 <span className="material-symbols-outlined absolute left-3 text-tertiary text-[18px] pointer-events-none">tune</span>
-<select className="pl-9 pr-10 py-2 rounded-xl bg-surface-container-low text-on-surface text-body-sm font-medium border border-border-glass focus:border-accent-electric/50 focus:outline-none focus:ring-1 focus:ring-accent-electric cursor-pointer appearance-none shadow-sm transition-all hover:bg-surface-container" id="scenarioPreset">
+<select suppressHydrationWarning className="pl-9 pr-10 py-2 rounded-xl bg-surface-container-low text-on-surface text-body-sm font-medium border border-border-glass focus:border-accent-electric/50 focus:outline-none focus:ring-1 focus:ring-accent-electric cursor-pointer appearance-none shadow-sm transition-all hover:bg-surface-container" id="scenarioPreset">
 <option>Preset: Severe Supply Chain &amp; Payment Shock</option>
 <option>Preset: Mild Delayed Receivables (+10d)</option>
 <option>Preset: Raw Material Price Spike (Kraft Paper +25%)</option>
@@ -51,11 +51,11 @@ export default async function StressLabPage() {
 </select>
 <span className="material-symbols-outlined absolute right-3 text-outline text-[18px] pointer-events-none">unfold_more</span>
 </div>
-<button className="flex items-center gap-1.5 px-4 py-2 rounded-xl bg-surface-container-high/60 hover:bg-surface-container-high text-on-surface text-body-sm font-medium border border-border-glass transition-all hover:border-border-glass-strong shadow-sm" id="resetBtn">
+<button suppressHydrationWarning className="flex items-center gap-1.5 px-4 py-2 rounded-xl bg-surface-container-high/60 hover:bg-surface-container-high text-on-surface text-body-sm font-medium border border-border-glass transition-all hover:border-border-glass-strong shadow-sm" id="resetBtn">
 <span className="material-symbols-outlined text-[16px] text-outline">restart_alt</span>
 <span>Reset Baseline</span>
 </button>
-<button className="flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-primary-container to-secondary-container text-on-primary-container text-body-sm font-semibold shadow-[0_0_24px_rgba(99,102,241,0.25)] hover:brightness-110 active:scale-[0.98] transition-all">
+<button suppressHydrationWarning className="flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-primary-container to-secondary-container text-on-primary-container text-body-sm font-semibold shadow-[0_0_24px_rgba(99,102,241,0.25)] hover:brightness-110 active:scale-[0.98] transition-all">
 <span className="material-symbols-outlined text-[16px]">file_download</span>
 <span>Export Stress Dossier</span>
 </button>
@@ -89,7 +89,7 @@ export default async function StressLabPage() {
 <span className="px-2 py-0.5 rounded bg-semantic-critical/15 text-semantic-critical font-label-metric-md text-label-metric-md border border-semantic-critical/30" id="valRevenueShock">-20%</span>
 </div>
 </div>
-<input className="w-full accent-semantic-critical bg-surface-container-highest h-1.5 rounded-lg appearance-none cursor-pointer" id="sliderRevenue" max="40" min="10" step="5" type="range" value="20" />
+<input suppressHydrationWarning className="w-full accent-semantic-critical bg-surface-container-highest h-1.5 rounded-lg appearance-none cursor-pointer" id="sliderRevenue" max="40" min="10" step="5" type="range" defaultValue="20" />
 <div className="flex items-center justify-between text-label-caps font-label-caps text-outline px-0.5">
 <span>-10%</span>
 <span className="text-semantic-critical font-label-metric-md text-[11px] bg-surface-container-low px-2 py-0.5 rounded border border-border-glass">Loss of ~₹2.14L/mo top-line</span>
@@ -107,7 +107,7 @@ export default async function StressLabPage() {
 <span className="px-2 py-0.5 rounded bg-semantic-warning/15 text-semantic-warning font-label-metric-md text-label-metric-md border border-semantic-warning/30" id="valDelay">+15 Days</span>
 </div>
 </div>
-<input className="w-full accent-semantic-warning bg-surface-container-highest h-1.5 rounded-lg appearance-none cursor-pointer" id="sliderDelay" max="45" min="7" step="1" type="range" value="15" />
+<input suppressHydrationWarning className="w-full accent-semantic-warning bg-surface-container-highest h-1.5 rounded-lg appearance-none cursor-pointer" id="sliderDelay" max="45" min="7" step="1" type="range" defaultValue="15" />
 <div className="flex items-center justify-between text-label-caps font-label-caps text-outline px-0.5">
 <span>+7d (DSO 54d)</span>
 <span className="text-semantic-warning font-label-metric-md text-[11px] bg-surface-container-low px-2 py-0.5 rounded border border-border-glass">₹4.8L receivables trapped · DSO → 62d</span>
@@ -125,7 +125,7 @@ export default async function StressLabPage() {
 <span className="px-2 py-0.5 rounded bg-tertiary-container/30 text-tertiary font-label-metric-md text-label-metric-md border border-tertiary-container/50" id="valInflation">+10%</span>
 </div>
 </div>
-<input className="w-full accent-tertiary bg-surface-container-highest h-1.5 rounded-lg appearance-none cursor-pointer" id="sliderInflation" max="25" min="5" step="1" type="range" value="10" />
+<input suppressHydrationWarning className="w-full accent-tertiary bg-surface-container-highest h-1.5 rounded-lg appearance-none cursor-pointer" id="sliderInflation" max="25" min="5" step="1" type="range" defaultValue="10" />
 <div className="flex items-center justify-between text-label-caps font-label-caps text-outline px-0.5">
 <span>+5%</span>
 <span className="text-tertiary font-label-metric-md text-[11px] bg-surface-container-low px-2 py-0.5 rounded border border-border-glass">+₹78K/mo OPEX expansion</span>
@@ -143,7 +143,7 @@ export default async function StressLabPage() {
 <span className="px-2 py-0.5 rounded bg-secondary/20 text-secondary font-label-metric-md text-label-metric-md border border-secondary/30" id="valCapex">+15%</span>
 </div>
 </div>
-<input className="w-full accent-secondary bg-surface-container-highest h-1.5 rounded-lg appearance-none cursor-pointer" id="sliderCapex" max="50" min="0" step="5" type="range" value="15" />
+<input suppressHydrationWarning className="w-full accent-secondary bg-surface-container-highest h-1.5 rounded-lg appearance-none cursor-pointer" id="sliderCapex" max="50" min="0" step="5" type="range" defaultValue="15" />
 <div className="flex items-center justify-between text-label-caps font-label-caps text-outline px-0.5">
 <span>0% (On Schedule)</span>
 <span className="text-secondary font-label-metric-md text-[11px] bg-surface-container-low px-2 py-0.5 rounded border border-border-glass">Phase-1 outlay drag: +₹1.20L</span>
@@ -161,7 +161,7 @@ export default async function StressLabPage() {
 <span className="px-2 py-0.5 rounded bg-semantic-critical/20 text-semantic-critical font-label-metric-md text-label-metric-md border border-semantic-critical/40" id="valChurn">25% Volume</span>
 </div>
 </div>
-<input className="w-full accent-semantic-critical bg-surface-container-highest h-1.5 rounded-lg appearance-none cursor-pointer" id="sliderChurn" max="100" min="0" step="5" type="range" value="25" />
+<input suppressHydrationWarning className="w-full accent-semantic-critical bg-surface-container-highest h-1.5 rounded-lg appearance-none cursor-pointer" id="sliderChurn" max="100" min="0" step="5" type="range" defaultValue="25" />
 <div className="flex items-center justify-between text-label-caps font-label-caps text-outline px-0.5">
 <span>0% Stable</span>
 <span className="text-semantic-critical font-label-metric-md text-[11px] bg-surface-container-low px-2 py-0.5 rounded border border-border-glass">Top Auto OEM contract suspended</span>
@@ -172,11 +172,11 @@ export default async function StressLabPage() {
 {/*  Action Bar in Controller  */}
 <div className="mt-10 pt-4 border-t border-border-glass flex flex-col gap-2">
 <div className="flex items-center gap-2">
-<button className="flex-1 py-3 px-4 rounded-xl bg-gradient-to-r from-primary-container via-secondary-container to-inverse-primary text-on-primary font-headline-sm text-body-md font-semibold flex items-center justify-center gap-2 shadow-[0_0_24px_rgba(128,131,255,0.35)] hover:shadow-[0_0_32px_rgba(128,131,255,0.5)] active:scale-[0.99] transition-all" id="runScenarioBtn">
+<button suppressHydrationWarning className="flex-1 py-3 px-4 rounded-xl bg-gradient-to-r from-primary-container via-secondary-container to-inverse-primary text-on-primary font-headline-sm text-body-md font-semibold flex items-center justify-center gap-2 shadow-[0_0_24px_rgba(128,131,255,0.35)] hover:shadow-[0_0_32px_rgba(128,131,255,0.5)] active:scale-[0.99] transition-all" id="runScenarioBtn">
 <span className="material-symbols-outlined text-[18px]">bolt</span>
 <span>Run Scenario Simulation</span>
 </button>
-<button className="p-3 rounded-xl bg-surface-container-high/80 hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface border border-border-glass transition-colors" id="quickResetBtn" title="Revert to baseline state">
+<button suppressHydrationWarning className="p-3 rounded-xl bg-surface-container-high/80 hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface border border-border-glass transition-colors" id="quickResetBtn" title="Revert to baseline state">
 <span className="material-symbols-outlined text-[20px]">rotate_left</span>
 </button>
 </div>
@@ -327,21 +327,21 @@ export default async function StressLabPage() {
 </defs>
 {/*  Horizontal Gridlines & Y-Axis Reference  */}
 <line stroke="rgba(255,255,255,0.06)" strokeWidth="1" x1="50" x2="740" y1="30" y2="30"></line>
-<text fill="#908fa0" font-family="JetBrains Mono" font-size="10" text-anchor="end" x="40" y="34">₹3.0L</text>
+<text fill="#908fa0" fontFamily="JetBrains Mono" fontSize="10" textAnchor="end" x="40" y="34">₹3.0L</text>
 <line stroke="rgba(255,255,255,0.06)" strokeWidth="1" x1="50" x2="740" y1="90" y2="90"></line>
-<text fill="#908fa0" font-family="JetBrains Mono" font-size="10" text-anchor="end" x="40" y="94">₹2.0L</text>
+<text fill="#908fa0" fontFamily="JetBrains Mono" fontSize="10" textAnchor="end" x="40" y="94">₹2.0L</text>
 <line stroke="rgba(255,255,255,0.06)" strokeWidth="1" x1="50" x2="740" y1="150" y2="150"></line>
-<text fill="#908fa0" font-family="JetBrains Mono" font-size="10" text-anchor="end" x="40" y="154">₹1.0L</text>
+<text fill="#908fa0" fontFamily="JetBrains Mono" fontSize="10" textAnchor="end" x="40" y="154">₹1.0L</text>
 <line stroke="rgba(255,255,255,0.06)" strokeWidth="1" x1="50" x2="740" y1="210" y2="210"></line>
-<text fill="#908fa0" font-family="JetBrains Mono" font-size="10" text-anchor="end" x="40" y="214">₹0.5L</text>
+<text fill="#908fa0" fontFamily="JetBrains Mono" fontSize="10" textAnchor="end" x="40" y="214">₹0.5L</text>
 <line stroke="rgba(255,255,255,0.12)" strokeWidth="1" x1="50" x2="740" y1="260" y2="260"></line>
-<text fill="#908fa0" font-family="JetBrains Mono" font-size="10" text-anchor="end" x="40" y="264">₹0.0</text>
+<text fill="#908fa0" fontFamily="JetBrains Mono" fontSize="10" textAnchor="end" x="40" y="264">₹0.0</text>
 {/*  Covenant Line (Threshold ₹65K ~ y: 200)  */}
-<line stroke="#F59E0B" strokeDasharray="6 4" stroke-opacity="0.85" strokeWidth="1.5" x1="50" x2="740" y1="200" y2="200"></line>
-<text fill="#F59E0B" font-family="Inter" font-size="10" font-weight="600" text-anchor="end" x="735" y="194">Min. Payroll / Covenant Floor (₹65,000)</text>
+<line stroke="#F59E0B" strokeDasharray="6 4" strokeOpacity="0.85" strokeWidth="1.5" x1="50" x2="740" y1="200" y2="200"></line>
+<text fill="#F59E0B" fontFamily="Inter" fontSize="10" fontWeight="600" textAnchor="end" x="735" y="194">Min. Payroll / Covenant Floor (₹65,000)</text>
 {/*  Breach Shaded Area (Days 55 - 90: x=460 to 740)  */}
 <rect fill="url(#dangerHatch)" height="60" rx="2" width="275" x="465" y="200"></rect>
-<text fill="#F43F5E" font-family="Inter" font-size="10" font-weight="600" opacity="0.9" x="475" y="250">Breach Zone · Insolvency Exposure</text>
+<text fill="#F43F5E" fontFamily="Inter" fontSize="10" fontWeight="600" opacity="0.9" x="475" y="250">Breach Zone · Insolvency Exposure</text>
 {/*  Area Fill Baseline  */}
 <path d="M 60 70 
                      C 140 65, 220 95, 300 90 
@@ -377,12 +377,12 @@ export default async function StressLabPage() {
 {/*  Day 72 Indicator Line  */}
 <line opacity="0.6" stroke="#F43F5E" strokeDasharray="3 3" strokeWidth="1" x1="600" x2="600" y1="30" y2="260"></line>
 {/*  X-Axis Labels  */}
-<text fill="#908fa0" font-family="JetBrains Mono" font-size="11" text-anchor="middle" x="60" y="280">Day 0 (Oct 1)</text>
-<text fill="#908fa0" font-family="JetBrains Mono" font-size="11" text-anchor="middle" x="210" y="280">Day 20</text>
-<text fill="#908fa0" font-family="JetBrains Mono" font-size="11" text-anchor="middle" x="360" y="280">Day 40 (Nov 10)</text>
-<text fill="#908fa0" font-family="JetBrains Mono" font-size="11" text-anchor="middle" x="510" y="280">Day 60 (Nov 30)</text>
-<text fill="#F43F5E" font-family="JetBrains Mono" font-size="11" font-weight="600" text-anchor="middle" x="600" y="280">Day 72 (Dec 12)</text>
-<text fill="#908fa0" font-family="JetBrains Mono" font-size="11" text-anchor="end" x="735" y="280">Day 90 (Dec 30)</text>
+<text fill="#908fa0" fontFamily="JetBrains Mono" fontSize="11" textAnchor="middle" x="60" y="280">Day 0 (Oct 1)</text>
+<text fill="#908fa0" fontFamily="JetBrains Mono" fontSize="11" textAnchor="middle" x="210" y="280">Day 20</text>
+<text fill="#908fa0" fontFamily="JetBrains Mono" fontSize="11" textAnchor="middle" x="360" y="280">Day 40 (Nov 10)</text>
+<text fill="#908fa0" fontFamily="JetBrains Mono" fontSize="11" textAnchor="middle" x="510" y="280">Day 60 (Nov 30)</text>
+<text fill="#F43F5E" fontFamily="JetBrains Mono" fontSize="11" fontWeight="600" textAnchor="middle" x="600" y="280">Day 72 (Dec 12)</text>
+<text fill="#908fa0" fontFamily="JetBrains Mono" fontSize="11" textAnchor="end" x="735" y="280">Day 90 (Dec 30)</text>
 </svg>
 {/*  Interactive Tooltip Overlay on Day 72  */}
 <div className="absolute left-[64%] top-[34%] transform -translate-x-1/2 p-2 rounded-lg bg-surface-overlay/95 border border-semantic-critical/50 backdrop-blur-xl shadow-[0_8px_24px_rgba(244,63,94,0.3)] pointer-events-none max-w-xs">
@@ -463,7 +463,7 @@ export default async function StressLabPage() {
             </p>
 </div>
 <div className="flex flex-col gap-2">
-<button className="w-full py-2.5 px-4 rounded-xl bg-primary text-on-primary font-body-md text-body-md font-semibold flex items-center justify-center gap-2 hover:brightness-105 active:scale-[0.98] transition-all shadow-[0_0_16px_rgba(192,193,255,0.25)]">
+<button suppressHydrationWarning className="w-full py-2.5 px-4 rounded-xl bg-primary text-on-primary font-body-md text-body-md font-semibold flex items-center justify-center gap-2 hover:brightness-105 active:scale-[0.98] transition-all shadow-[0_0_16px_rgba(192,193,255,0.25)]">
 <span>Model Working Capital Line</span>
 <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
 </button>

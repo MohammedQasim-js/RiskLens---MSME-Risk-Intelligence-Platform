@@ -36,7 +36,7 @@ export async function TopBar() {
     <div className="sticky top-0 z-10 flex h-16 flex-shrink-0 items-center justify-between border-b border-white/5 bg-surface/80 backdrop-blur-md px-6">
       <div className="flex items-center gap-4">
         {activeBusiness ? (
-          <button className="flex items-center gap-2 text-sm font-medium text-white hover:text-primary transition-colors">
+          <button suppressHydrationWarning className="flex items-center gap-2 text-sm font-medium text-white hover:text-primary transition-colors">
             <div className="h-8 w-8 rounded bg-primary/20 border border-primary/30 flex items-center justify-center text-primary font-bold uppercase tracking-widest">
               {activeBusiness.legal_name.substring(0, 2)}
             </div>
@@ -70,12 +70,12 @@ export async function TopBar() {
 
         <div className="h-4 w-px bg-white/10" />
 
-        <button className="text-on-surface-variant hover:text-white transition-colors relative">
+        <button suppressHydrationWarning className="text-on-surface-variant hover:text-white transition-colors relative">
           <Bell className="h-5 w-5" />
           <span className="absolute top-0 right-0 h-2 w-2 rounded-full bg-rose-500 border border-surface" />
         </button>
 
-        <button className="h-8 w-8 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-on-surface-variant hover:text-white hover:border-white/40 transition-all">
+        <button suppressHydrationWarning className="h-8 w-8 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-on-surface-variant hover:text-white hover:border-white/40 transition-all">
           <User className="h-4 w-4" />
         </button>
       </div>
