@@ -131,7 +131,7 @@ export function RevenuePerformanceChart() {
                 fontWeight: 600,
                 textTransform: "uppercase",
               }}
-              formatter={(value: number | string, name: string) => {
+              formatter={(value: any, name: any) => {
                 const v = Number(value).toFixed(2);
                 if (name === "target") return [`₹${v}L`, "Target Plan"];
                 if (name === "actual") return [`₹${v}L`, "Actual Realized"];

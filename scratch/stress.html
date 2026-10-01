@@ -1,0 +1,571 @@
+<!DOCTYPE html><html class="dark" lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Inter:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-lowest":"#0b0e15","secondary-container":"#571bc1","border-glass":"rgba(255, 255, 255, 0.08)","surface-base":"#0A0D14","on-secondary-fixed":"#23005c","on-error-container":"#ffdad6","inverse-primary":"#494bd6","on-primary-fixed":"#07006c","surface-overlay":"#141B2D","primary-fixed":"#e1e0ff","glass-fill-hover":"rgba(20, 27, 45, 0.80)","tertiary-container":"#009eb9","surface":"#10131a","on-secondary-fixed-variant":"#5516be","surface-variant":"#32353d","on-primary":"#1000a9","on-surface":"#e1e2ec","secondary-fixed":"#e9ddff","on-background":"#e1e2ec","semantic-success":"#10B981","accent-electric":"#38BDF8","glass-fill":"rgba(15, 20, 34, 0.65)","surface-container-highest":"#32353d","on-tertiary-fixed-variant":"#004e5c","on-primary-container":"#0d0096","border-glass-strong":"rgba(255, 255, 255, 0.16)","surface-container":"#1d1f27","surface-tint":"#c0c1ff","primary":"#c0c1ff","background":"#10131a","primary-fixed-dim":"#c0c1ff","surface-dim":"#10131a","on-error":"#690005","semantic-warning":"#F59E0B","on-surface-variant":"#c7c4d7","on-tertiary-container":"#002f38","on-tertiary":"#003640","tertiary-fixed":"#acedff","error-container":"#93000a","tertiary-fixed-dim":"#4cd7f6","surface-bright":"#363941","outline-variant":"#464554","error":"#ffb4ab","surface-container-low":"#191b23","semantic-critical":"#F43F5E","secondary-fixed-dim":"#d0bcff","on-secondary":"#3c0091","on-secondary-container":"#c4abff","on-primary-fixed-variant":"#2f2ebe","surface-container-high":"#272a32","surface-raised":"#0F1422","on-tertiary-fixed":"#001f26","tertiary":"#4cd7f6","outline":"#908fa0","inverse-surface":"#e1e2ec","inverse-on-surface":"#2d3038","secondary":"#d0bcff","primary-container":"#8083ff"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"gutter-mobile":"0.75rem","space-sm":"0.5rem","margin-mobile":"1rem","space-lg":"1.5rem","space-xl":"2.5rem",margin:"2rem",gutter:"1.25rem","space-xs":"0.25rem","space-md":"1rem"},fontFamily:{"body-lg":["Inter"],"label-caps":["Inter"],"display-lg":["Geist"],"body-sm":["Inter"],"body-md":["Inter"],"label-metric-md":["JetBrains Mono"],"headline-md":["Geist"],"headline-xl-mobile":["Geist"],"display-lg-mobile":["Geist"],"label-metric-lg":["JetBrains Mono"],"headline-xl":["Geist"],"headline-lg":["Geist"],"headline-sm":["Geist"]},fontSize:{"body-lg":["16px",{lineHeight:"24px",letterSpacing:"-0.01em",fontWeight:"400"}],"label-caps":["11px",{lineHeight:"16px",letterSpacing:"0.06em",fontWeight:"600"}],"display-lg":["48px",{lineHeight:"56px",letterSpacing:"-0.03em",fontWeight:"600"}],"body-sm":["12px",{lineHeight:"18px",letterSpacing:"0.01em",fontWeight:"400"}],"body-md":["14px",{lineHeight:"20px",letterSpacing:"0em",fontWeight:"400"}],"label-metric-md":["14px",{lineHeight:"20px",letterSpacing:"0em",fontWeight:"500"}],"headline-md":["22px",{lineHeight:"30px",letterSpacing:"-0.015em",fontWeight:"500"}],"headline-xl-mobile":["26px",{lineHeight:"34px",letterSpacing:"-0.02em",fontWeight:"600"}],"display-lg-mobile":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"600"}],"label-metric-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.02em",fontWeight:"500"}],"headline-xl":["36px",{lineHeight:"44px",letterSpacing:"-0.025em",fontWeight:"600"}],"headline-lg":["28px",{lineHeight:"36px",letterSpacing:"-0.02em",fontWeight:"600"}],"headline-sm":["18px",{lineHeight:"26px",letterSpacing:"-0.01em",fontWeight:"500"}]}}}};</script><style>
+@font-face {
+  font-family: 'Inter var';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url("chrome-extension://neabdmkliomokekhgnogbeonopbjmajc/content/Inter-roman.var.woff2?v=3.19") format("woff2");
+}
+@font-face {
+  font-family: 'Inter var';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+  font-named-instance: 'Italic';
+  src: url("chrome-extension://neabdmkliomokekhgnogbeonopbjmajc/content/Inter-italic.var.woff2?v=3.19") format("woff2");
+}
+</style></head><body class="bg-surface-base font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-lowest/90 backdrop-blur-2xl z-50 flex flex-col justify-between border-r border-border-glass shadow-[0_8px_32px_-4px_rgba(0,0,0,0.45)]"><div class="flex flex-col flex-1 overflow-y-auto"><div class="h-16 px-space-md flex items-center justify-between border-b border-border-glass"><div class="flex items-center gap-space-sm"><img alt="RiskLens MRIP Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UvG8Yk7CY-ssJoe1p7NbQGWzQrOH4cH06gKF0H_NC4iHpkoQyLimYy2dZsuz1wjyRURVQimQLQVDXiARAlxi4fuYDeon6d70jbeiwgrNUtKiNHHaXP7RC5mgZb6bS0iqB1jY-uQTHA335qgctiZyNfdRKNVKMiqaPbjeTNlumfqguFzI2R9StY2vWAYqMLneE0qo2UEV5x0qboheUvxfJ04-UBV9r6Aj5Mqx1xvSaEjdrlsly9aGeGOm3A"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">RiskLens</span><span class="font-label-caps text-label-caps text-tertiary tracking-wider uppercase">MRIP Engine</span></div></div><span class="px-space-xs py-0.5 rounded-full bg-secondary-container/30 border border-secondary-container/50 text-secondary font-label-caps text-label-caps">v3.8</span></div><div class="px-space-md py-space-sm"><div class="px-space-sm py-space-xs font-label-caps text-label-caps text-outline uppercase tracking-wider">Intelligence Suites</div><nav class="flex flex-col gap-1 mt-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-medium rounded-xl shadow-[0_0_20px_rgba(99,102,241,0.25)]"><a class="group flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200" data-path="overview" href="#"><span class="font-body-md text-body-md">Overview</span></a><a class="group flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200" data-path="cash-flow" href="#"><span class="font-body-md text-body-md">Cash Flow</span></a><a class="group flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200" data-path="plan-vs-actual" href="#"><span class="font-body-md text-body-md">Plan vs Actual</span></a><a class="group flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200" data-path="forecast" href="#"><span class="font-body-md text-body-md">Forecast</span></a><a aria-current="page" class="group flex items-center px-space-md py-space-sm transition-all duration-200 bg-primary-container text-on-primary-container font-medium rounded-xl shadow-[0_0_20px_rgba(99,102,241,0.25)]" data-path="stress-lab" href="#"><span class="font-body-md text-body-md">Stress Lab</span></a><a class="group flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200" data-path="explainability" href="#"><span class="font-body-md text-body-md">Explainability</span></a><a class="group flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200" data-path="model-lab" href="#"><span class="font-body-md text-body-md">Model Lab</span></a><a class="group flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200" data-path="fairness" href="#"><span class="font-body-md text-body-md">Fairness</span></a><a class="group flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200" data-path="report" href="#"><span class="font-body-md text-body-md">Report</span></a></nav></div></div><div class="p-space-md flex flex-col gap-space-sm border-t border-border-glass bg-surface-container-low/40"><div class="p-space-sm rounded-lg bg-surface-container/60 border border-border-glass flex flex-col gap-1"><div class="flex items-center justify-between"><span class="font-label-caps text-label-caps text-semantic-success flex items-center gap-1.5"><span class="inline-block w-1.5 h-1.5 rounded-full bg-semantic-success animate-pulse"></span>RBI / AA Protocol</span><span class="material-symbols-outlined text-[14px] text-semantic-success">verified_user</span></div><span class="font-body-sm text-body-sm text-outline-variant text-[11px]">Tier-1 End-to-End Encryption</span></div><div class="flex items-center justify-between pt-1"><a class="flex items-center text-on-surface-variant hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="settings" href="#"><span class="font-body-sm text-body-sm">Settings</span></a><a class="flex items-center text-on-surface-variant hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="support" href="#"><span class="font-body-sm text-body-sm">Support</span></a><div class="flex items-center gap-1.5 text-on-surface-variant font-label-caps text-label-caps"><span class="w-2 h-2 rounded-full bg-semantic-success"></span><span>Active</span></div></div></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/80 backdrop-blur-xl z-40 border-b border-border-glass shadow-[0_4px_24px_-2px_rgba(0,0,0,0.35)] px-margin flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm px-space-md py-1.5 rounded-xl bg-surface-container-low/80 border border-border-glass hover:border-accent-electric/40 transition-all cursor-pointer"><div class="flex flex-col text-left"><div class="flex items-center gap-2"><span class="font-body-md text-body-md font-semibold text-on-surface">Aarav Packaging · Mumbai</span><span class="px-1.5 py-0.5 rounded bg-tertiary-container/20 text-tertiary border border-tertiary-container/30 font-label-caps text-label-caps">MSME</span></div><span class="font-body-sm text-body-sm text-outline">Manufacturing · Primary Credit Unit</span></div><span class="material-symbols-outlined text-outline text-[18px]">unfold_more</span></div><div class="hidden xl:flex items-center gap-space-sm pl-space-xs"><div class="flex items-center gap-2 px-space-md py-1 rounded-full bg-surface-container-high/60 border border-border-glass"><span class="w-2 h-2 rounded-full bg-semantic-success shadow-[0_0_8px_#10B981]"></span><span class="font-label-metric-md text-label-metric-md text-on-surface-variant text-[12px]">Updated Today, Sep 30, 2026</span></div><div class="flex items-center gap-2 px-space-md py-1 rounded-full bg-primary-container/10 border border-primary-container/30"><span class="material-symbols-outlined text-[16px] text-tertiary">speed</span><span class="font-body-sm text-body-sm text-primary">Data Confidence: <strong class="font-label-metric-md text-label-metric-md text-on-surface">86/100</strong> (High-quality evidence)</span></div></div></div><div class="flex items-center gap-space-md"><button aria-label="Notifications" class="relative p-2 rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/80 transition-colors border border-transparent hover:border-border-glass" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-semantic-critical ring-2 ring-surface-container-lowest"></span></button><div class="h-7 w-px bg-border-glass hidden sm:block"></div><div class="flex items-center gap-space-sm cursor-pointer"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-border-glass-strong" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrXVdUb7V5AO26OCq7Vc4QVBfgBUO2__p2E7em2Lg_BF4Wq94AXjkOiggKzyKoAzH2QjutBL1c1gURjCBfiVztv_hilKUOCUPLTITJNyjd5nlwOvWesfv4U3Kr-Phc0_7WluXPbKagLl28i8_XOTfrcDAb41gPsc6gTuW5ZhGAH7fhHyafDNQwfMVu3nYL6O0wXGEviGGHeOTTTHGESNtuEtmtYivnCAdOVbzZvw_3wKuBL21LG970rQ"><div class="hidden lg:flex flex-col text-right"><span class="font-body-md text-body-md font-medium text-on-surface leading-tight">Priya Sharma</span><span class="font-body-sm text-body-sm text-outline text-[11px] leading-tight">Chief Risk Officer / Finance Lead</span></div></div></div></header><main class="w-full pt-16 bg-surface-base flex-1"><div class="flex flex-col w-full">
+<!-- Top Command Ribbon & Scenario Meta -->
+<div class="px-margin py-space-lg flex flex-col xl:flex-row xl:items-center justify-between gap-space-md border-b border-border-glass bg-surface-container-lowest/60 backdrop-blur-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-label-caps text-label-caps text-accent-electric tracking-widest uppercase">Risk Sensitivity Sandbox</span>
+<span class="text-outline text-xs">/</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Aarav Packaging Pvt Ltd</span>
+<span class="text-outline text-xs">/</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/20 text-secondary text-label-caps font-label-caps border border-secondary-container/40 flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-tertiary">alt_route</span>
+          Counterfactual Engine v3.8
+        </span>
+</div>
+<div class="flex items-baseline gap-space-md mt-1">
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight font-semibold">Stress Lab</h1>
+<p class="font-body-md text-body-md text-outline">What happens to your business if operational and market conditions change?</p>
+</div>
+</div>
+<!-- Actions & Presets Ribbon -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-tertiary text-[18px] pointer-events-none">tune</span>
+<select class="pl-9 pr-10 py-2 rounded-xl bg-surface-container-low text-on-surface text-body-sm font-medium border border-border-glass focus:border-accent-electric/50 focus:outline-none focus:ring-1 focus:ring-accent-electric cursor-pointer appearance-none shadow-sm transition-all hover:bg-surface-container" id="scenarioPreset">
+<option selected="">Preset: Severe Supply Chain &amp; Payment Shock</option>
+<option>Preset: Mild Delayed Receivables (+10d)</option>
+<option>Preset: Raw Material Price Spike (Kraft Paper +25%)</option>
+<option>Preset: Tier-1 Client Churn &amp; Order Freeze</option>
+<option>Preset: RBI Base Rate +150 bps Tightening</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 text-outline text-[18px] pointer-events-none">unfold_more</span>
+</div>
+<button class="flex items-center gap-1.5 px-space-md py-2 rounded-xl bg-surface-container-high/60 hover:bg-surface-container-high text-on-surface text-body-sm font-medium border border-border-glass transition-all hover:border-border-glass-strong shadow-sm" id="resetBtn">
+<span class="material-symbols-outlined text-[16px] text-outline">restart_alt</span>
+<span>Reset Baseline</span>
+</button>
+<button class="flex items-center gap-2 px-space-md py-2 rounded-xl bg-gradient-to-r from-primary-container to-secondary-container text-on-primary-container text-body-sm font-semibold shadow-[0_0_24px_rgba(99,102,241,0.25)] hover:brightness-110 active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Export Stress Dossier</span>
+</button>
+</div>
+</div>
+<!-- Main 2-Column Institutional Workbench -->
+<div class="p-margin grid grid-cols-1 xl:grid-cols-12 gap-gutter items-start">
+<!-- LEFT COLUMN: Shock Parameters & Stress Sliders (5 cols) -->
+<div class="xl:col-span-5 flex flex-col gap-space-lg">
+<div class="rounded-xl bg-glass-fill border border-border-glass backdrop-blur-xl p-space-lg shadow-[0_8px_32px_-4px_rgba(0,0,0,0.45)] relative overflow-hidden">
+<!-- Subtle corner glow -->
+<div class="absolute -top-16 -left-16 w-44 h-44 rounded-full bg-secondary-container/15 blur-3xl pointer-events-none"></div>
+<div class="flex items-center justify-between pb-space-md border-b border-border-glass">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[20px]">sliders</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">Shock Parameters &amp; Sliders</h2>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-outline text-label-caps font-label-caps uppercase tracking-wider">
+            Deterministic Mode
+          </span>
+</div>
+<div class="mt-space-lg flex flex-col gap-space-xl">
+<!-- Parameter 1: Revenue Shock -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<label class="font-body-md text-body-md font-medium text-on-surface flex items-center gap-1.5">
+<span>Revenue Contraction</span>
+<span class="material-symbols-outlined text-[15px] text-outline cursor-help" title="Immediate contraction in monthly billed volume across tier-2 converters">info</span>
+</label>
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-semantic-critical/15 text-semantic-critical font-label-metric-md text-label-metric-md border border-semantic-critical/30" id="valRevenueShock">-20%</span>
+</div>
+</div>
+<input class="w-full accent-semantic-critical bg-surface-container-highest h-1.5 rounded-lg appearance-none cursor-pointer" id="sliderRevenue" max="40" min="10" step="5" type="range" value="20">
+<div class="flex items-center justify-between text-label-caps font-label-caps text-outline px-0.5">
+<span>-10%</span>
+<span class="text-semantic-critical font-label-metric-md text-[11px] bg-surface-container-low px-2 py-0.5 rounded border border-border-glass">Loss of ~₹2.14L/mo top-line</span>
+<span>-40%</span>
+</div>
+</div>
+<!-- Parameter 2: Receivable Delay -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<label class="font-body-md text-body-md font-medium text-on-surface flex items-center gap-1.5">
+<span>Receivable Collections Delay</span>
+<span class="material-symbols-outlined text-[15px] text-outline cursor-help" title="Slippage in buyer payment cycles beyond stated GST credit terms">info</span>
+</label>
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-semantic-warning/15 text-semantic-warning font-label-metric-md text-label-metric-md border border-semantic-warning/30" id="valDelay">+15 Days</span>
+</div>
+</div>
+<input class="w-full accent-semantic-warning bg-surface-container-highest h-1.5 rounded-lg appearance-none cursor-pointer" id="sliderDelay" max="45" min="7" step="1" type="range" value="15">
+<div class="flex items-center justify-between text-label-caps font-label-caps text-outline px-0.5">
+<span>+7d (DSO 54d)</span>
+<span class="text-semantic-warning font-label-metric-md text-[11px] bg-surface-container-low px-2 py-0.5 rounded border border-border-glass">₹4.8L receivables trapped · DSO → 62d</span>
+<span>+45d (DSO 92d)</span>
+</div>
+</div>
+<!-- Parameter 3: Cost Inflation -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<label class="font-body-md text-body-md font-medium text-on-surface flex items-center gap-1.5">
+<span>Input Cost Inflation (Kraft Paper)</span>
+<span class="material-symbols-outlined text-[15px] text-outline cursor-help" title="Corrugated roll &amp; raw virgin craft starch market price surge">info</span>
+</label>
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-tertiary-container/30 text-tertiary font-label-metric-md text-label-metric-md border border-tertiary-container/50" id="valInflation">+10%</span>
+</div>
+</div>
+<input class="w-full accent-tertiary bg-surface-container-highest h-1.5 rounded-lg appearance-none cursor-pointer" id="sliderInflation" max="25" min="5" step="1" type="range" value="10">
+<div class="flex items-center justify-between text-label-caps font-label-caps text-outline px-0.5">
+<span>+5%</span>
+<span class="text-tertiary font-label-metric-md text-[11px] bg-surface-container-low px-2 py-0.5 rounded border border-border-glass">+₹78K/mo OPEX expansion</span>
+<span>+25%</span>
+</div>
+</div>
+<!-- Parameter 4: Project Overrun (Die-Cutter capex) -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<label class="font-body-md text-body-md font-medium text-on-surface flex items-center gap-1.5">
+<span>Capex Overrun (Rotary Die-Cutter)</span>
+<span class="material-symbols-outlined text-[15px] text-outline cursor-help" title="Unbudgeted installation delays and spares procurement">info</span>
+</label>
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-secondary/20 text-secondary font-label-metric-md text-label-metric-md border border-secondary/30" id="valCapex">+15%</span>
+</div>
+</div>
+<input class="w-full accent-secondary bg-surface-container-highest h-1.5 rounded-lg appearance-none cursor-pointer" id="sliderCapex" max="50" min="0" step="5" type="range" value="15">
+<div class="flex items-center justify-between text-label-caps font-label-caps text-outline px-0.5">
+<span>0% (On Schedule)</span>
+<span class="text-secondary font-label-metric-md text-[11px] bg-surface-container-low px-2 py-0.5 rounded border border-border-glass">Phase-1 outlay drag: +₹1.20L</span>
+<span>+50% Overrun</span>
+</div>
+</div>
+<!-- Parameter 5: Customer Loss / Churn -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<label class="font-body-md text-body-md font-medium text-on-surface flex items-center gap-1.5">
+<span>Anchor Customer Default / Suspension</span>
+<span class="material-symbols-outlined text-[15px] text-outline cursor-help" title="Abrupt contract pause or liquidation from top anchor buyers">info</span>
+</label>
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-semantic-critical/20 text-semantic-critical font-label-metric-md text-label-metric-md border border-semantic-critical/40" id="valChurn">25% Volume</span>
+</div>
+</div>
+<input class="w-full accent-semantic-critical bg-surface-container-highest h-1.5 rounded-lg appearance-none cursor-pointer" id="sliderChurn" max="100" min="0" step="5" type="range" value="25">
+<div class="flex items-center justify-between text-label-caps font-label-caps text-outline px-0.5">
+<span>0% Stable</span>
+<span class="text-semantic-critical font-label-metric-md text-[11px] bg-surface-container-low px-2 py-0.5 rounded border border-border-glass">Top Auto OEM contract suspended</span>
+<span>100% Complete</span>
+</div>
+</div>
+</div>
+<!-- Action Bar in Controller -->
+<div class="mt-space-xl pt-space-md border-t border-border-glass flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<button class="flex-1 py-3 px-space-md rounded-xl bg-gradient-to-r from-primary-container via-secondary-container to-inverse-primary text-on-primary font-headline-sm text-body-md font-semibold flex items-center justify-center gap-2 shadow-[0_0_24px_rgba(128,131,255,0.35)] hover:shadow-[0_0_32px_rgba(128,131,255,0.5)] active:scale-[0.99] transition-all" id="runScenarioBtn">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span>Run Scenario Simulation</span>
+</button>
+<button class="p-3 rounded-xl bg-surface-container-high/80 hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface border border-border-glass transition-colors" id="quickResetBtn" title="Revert to baseline state">
+<span class="material-symbols-outlined text-[20px]">rotate_left</span>
+</button>
+</div>
+<div class="flex items-start gap-2 mt-1 px-1">
+<span class="material-symbols-outlined text-[15px] text-tertiary mt-0.5">verified</span>
+<p class="font-body-sm text-[11px] text-outline leading-tight">
+              Simulates deterministic liquidity impact across a 90-day horizon using verified RBI AA banking telemetry, GSTN e-waybill cycles, and active vendor schedules.
+            </p>
+</div>
+</div>
+</div>
+<!-- Historical Precedent Badge -->
+<div class="rounded-xl bg-surface-container-low/60 border border-border-glass p-space-md flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-tertiary-container/20 border border-tertiary-container/30 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-tertiary text-[20px]">history_toggle_off</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-medium text-on-surface">Historical Stress Precedent: Q3 FY24</span>
+<span class="font-body-sm text-body-sm text-outline">Entity weathered +18d receivables shock with ₹90K margin trough via emergency supplier trade credit deferral.</span>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Dynamic Results & Comparative Analysis (7 cols) -->
+<div class="xl:col-span-7 flex flex-col gap-space-lg">
+<!-- 1. Comparative Matrix Ribbon (Baseline vs Scenario vs Delta) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-sm">
+<!-- Metric 1: Probability of Default -->
+<div class="p-space-md rounded-xl bg-glass-fill border border-border-glass backdrop-blur-md flex flex-col justify-between transition-all hover:border-border-glass-strong">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">Prob. of Default (PD)</span>
+<span class="px-1.5 py-0.5 rounded bg-semantic-critical/20 text-semantic-critical text-[10px] font-label-caps font-bold">CRITICAL</span>
+</div>
+<div class="mt-space-md flex flex-col">
+<div class="flex items-baseline justify-between">
+<span class="font-body-sm text-[11px] text-outline">Baseline: 8.2%</span>
+<span class="font-headline-lg text-headline-lg font-semibold text-semantic-critical tracking-tight">14.7%</span>
+</div>
+<div class="flex items-center justify-between pt-1 border-t border-border-glass mt-1">
+<span class="font-label-caps text-[10px] text-outline">Scenario Shift</span>
+<span class="font-label-metric-md text-label-metric-md text-semantic-critical flex items-center">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span> +6.5 pts
+              </span>
+</div>
+</div>
+</div>
+<!-- Metric 2: Risk Band Rating -->
+<div class="p-space-md rounded-xl bg-glass-fill border border-border-glass backdrop-blur-md flex flex-col justify-between transition-all hover:border-border-glass-strong">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">Internal Risk Band</span>
+<span class="material-symbols-outlined text-semantic-warning text-[16px]">warning</span>
+</div>
+<div class="mt-space-md flex flex-col">
+<div class="flex items-baseline justify-between">
+<span class="font-body-sm text-[11px] text-outline">Base: Moderate</span>
+<span class="font-headline-lg text-headline-lg font-semibold text-semantic-critical tracking-tight">High Risk</span>
+</div>
+<div class="flex items-center justify-between pt-1 border-t border-border-glass mt-1">
+<span class="font-label-caps text-[10px] text-outline">Grade Migration</span>
+<span class="font-label-caps text-label-caps text-semantic-critical font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-semantic-critical animate-ping"></span> Downgrade 2 Tiers
+              </span>
+</div>
+</div>
+</div>
+<!-- Metric 3: Minimum Cash Trough -->
+<div class="p-space-md rounded-xl bg-glass-fill border border-border-glass backdrop-blur-md flex flex-col justify-between transition-all hover:border-border-glass-strong">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">Min. Cash Trough</span>
+<span class="material-symbols-outlined text-semantic-critical text-[16px]">trending_down</span>
+</div>
+<div class="mt-space-md flex flex-col">
+<div class="flex items-baseline justify-between">
+<span class="font-body-sm text-[11px] text-outline">Base: ₹1.85L</span>
+<span class="font-headline-lg text-headline-lg font-semibold text-semantic-critical tracking-tight">₹42K</span>
+</div>
+<div class="flex items-center justify-between pt-1 border-t border-border-glass mt-1">
+<span class="font-label-caps text-[10px] text-outline">Floor Breach</span>
+<span class="font-label-metric-md text-label-metric-md text-semantic-critical flex items-center">
+<span class="material-symbols-outlined text-[14px]">arrow_downward</span> -₹1.43L
+              </span>
+</div>
+</div>
+</div>
+<!-- Metric 4: Cash Buffer Days -->
+<div class="p-space-md rounded-xl bg-glass-fill border border-border-glass backdrop-blur-md flex flex-col justify-between transition-all hover:border-border-glass-strong">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">Liquidity Runway</span>
+<span class="px-1.5 py-0.5 rounded bg-semantic-warning/20 text-semantic-warning text-[10px] font-label-caps font-bold">&lt;15d ALERT</span>
+</div>
+<div class="mt-space-md flex flex-col">
+<div class="flex items-baseline justify-between">
+<span class="font-body-sm text-[11px] text-outline">Base: 24 Days</span>
+<span class="font-headline-lg text-headline-lg font-semibold text-semantic-warning tracking-tight">6 Days</span>
+</div>
+<div class="flex items-center justify-between pt-1 border-t border-border-glass mt-1">
+<span class="font-label-caps text-[10px] text-outline">Runway Burn</span>
+<span class="font-label-metric-md text-label-metric-md text-semantic-critical flex items-center">
+<span class="material-symbols-outlined text-[14px]">arrow_downward</span> -18 Days
+              </span>
+</div>
+</div>
+</div>
+</div>
+<!-- 2. Dual-Curve Chart Container -->
+<div class="rounded-xl bg-glass-fill border border-border-glass backdrop-blur-xl p-space-lg shadow-[0_8px_32px_-4px_rgba(0,0,0,0.45)] flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-sm border-b border-border-glass">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-accent-electric text-[20px]">area_chart</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Cash Trajectory Under Stress (90-Day Simulation)</h3>
+</div>
+<p class="font-body-sm text-body-sm text-outline">Direct comparison against deterministic baseline cash projections</p>
+</div>
+<div class="flex items-center gap-space-md flex-wrap text-label-caps font-label-caps">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-1 rounded bg-tertiary shadow-[0_0_8px_#4cd7f6]"></span>
+<span class="text-on-surface-variant">Baseline Plan</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-1 rounded bg-semantic-critical shadow-[0_0_8px_#F43F5E]"></span>
+<span class="text-semantic-critical">Stress Scenario</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-0.5 border-b border-dashed border-semantic-warning"></span>
+<span class="text-semantic-warning">Covenant Threshold (₹65K)</span>
+</div>
+</div>
+</div>
+<!-- SVG Dual Curve Chart Canvas -->
+<div class="relative w-full h-80 pt-2 pb-1 overflow-hidden select-none">
+<svg class="w-full h-full" fill="none" preserveAspectRatio="none" viewBox="0 0 760 300">
+<defs>
+<!-- Baseline Gradient Fill -->
+<linearGradient id="gradBaseline" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#4cd7f6" stop-opacity="0.25"></stop>
+<stop offset="100%" stop-color="#4cd7f6" stop-opacity="0.0"></stop>
+</linearGradient>
+<!-- Stress Scenario Gradient Fill -->
+<linearGradient id="gradStress" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#F43F5E" stop-opacity="0.30"></stop>
+<stop offset="100%" stop-color="#F43F5E" stop-opacity="0.02"></stop>
+</linearGradient>
+<!-- Breach Danger Zone Glow -->
+<linearGradient id="dangerHatch" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#F43F5E" stop-opacity="0.22"></stop>
+<stop offset="100%" stop-color="#F43F5E" stop-opacity="0.08"></stop>
+</linearGradient>
+</defs>
+<!-- Horizontal Gridlines & Y-Axis Reference -->
+<line stroke="rgba(255,255,255,0.06)" stroke-width="1" x1="50" x2="740" y1="30" y2="30"></line>
+<text fill="#908fa0" font-family="JetBrains Mono" font-size="10" text-anchor="end" x="40" y="34">₹3.0L</text>
+<line stroke="rgba(255,255,255,0.06)" stroke-width="1" x1="50" x2="740" y1="90" y2="90"></line>
+<text fill="#908fa0" font-family="JetBrains Mono" font-size="10" text-anchor="end" x="40" y="94">₹2.0L</text>
+<line stroke="rgba(255,255,255,0.06)" stroke-width="1" x1="50" x2="740" y1="150" y2="150"></line>
+<text fill="#908fa0" font-family="JetBrains Mono" font-size="10" text-anchor="end" x="40" y="154">₹1.0L</text>
+<line stroke="rgba(255,255,255,0.06)" stroke-width="1" x1="50" x2="740" y1="210" y2="210"></line>
+<text fill="#908fa0" font-family="JetBrains Mono" font-size="10" text-anchor="end" x="40" y="214">₹0.5L</text>
+<line stroke="rgba(255,255,255,0.12)" stroke-width="1" x1="50" x2="740" y1="260" y2="260"></line>
+<text fill="#908fa0" font-family="JetBrains Mono" font-size="10" text-anchor="end" x="40" y="264">₹0.0</text>
+<!-- Covenant Line (Threshold ₹65K ~ y: 200) -->
+<line stroke="#F59E0B" stroke-dasharray="6 4" stroke-opacity="0.85" stroke-width="1.5" x1="50" x2="740" y1="200" y2="200"></line>
+<text fill="#F59E0B" font-family="Inter" font-size="10" font-weight="600" text-anchor="end" x="735" y="194">Min. Payroll / Covenant Floor (₹65,000)</text>
+<!-- Breach Shaded Area (Days 55 - 90: x=460 to 740) -->
+<rect fill="url(#dangerHatch)" height="60" rx="2" width="275" x="465" y="200"></rect>
+<text fill="#F43F5E" font-family="Inter" font-size="10" font-weight="600" opacity="0.9" x="475" y="250">Breach Zone · Insolvency Exposure</text>
+<!-- Area Fill Baseline -->
+<path d="M 60 70 
+                     C 140 65, 220 95, 300 90 
+                     C 380 85, 460 120, 540 130 
+                     C 620 140, 680 155, 740 160 
+                     L 740 260 L 60 260 Z" fill="url(#gradBaseline)"></path>
+<!-- Area Fill Stress -->
+<path d="M 60 70 
+                     C 140 110, 220 135, 300 165 
+                     C 380 195, 460 215, 540 238 
+                     C 600 252, 650 256, 740 248 
+                     L 740 260 L 60 260 Z" fill="url(#gradStress)"></path>
+<!-- Curve 1: Baseline Plan (Teal/Cyan) -->
+<path d="M 60 70 
+                     C 140 65, 220 95, 300 90 
+                     C 380 85, 460 120, 540 130 
+                     C 620 140, 680 155, 740 160" fill="none" stroke="#4cd7f6" stroke-linecap="round" stroke-width="2.75"></path>
+<!-- Curve 2: Stress Scenario (Coral Red) -->
+<path d="M 60 70 
+                     C 140 110, 220 135, 300 165 
+                     C 380 195, 460 215, 540 238 
+                     C 600 252, 650 256, 740 248" fill="none" stroke="#F43F5E" stroke-linecap="round" stroke-width="3"></path>
+<!-- Key Anchor Points Baseline -->
+<circle cx="60" cy="70" fill="#4cd7f6" r="4" stroke="#0A0D14" stroke-width="2"></circle>
+<circle cx="300" cy="90" fill="#4cd7f6" r="4" stroke="#0A0D14" stroke-width="2"></circle>
+<circle cx="540" cy="130" fill="#4cd7f6" r="4" stroke="#0A0D14" stroke-width="2"></circle>
+<circle cx="740" cy="160" fill="#4cd7f6" r="4" stroke="#0A0D14" stroke-width="2"></circle>
+<!-- Key Points Stress -->
+<circle cx="60" cy="70" fill="#F43F5E" r="4" stroke="#0A0D14" stroke-width="2"></circle>
+<circle cx="300" cy="165" fill="#F43F5E" r="4" stroke="#0A0D14" stroke-width="2"></circle>
+<circle cx="490" cy="225" fill="#F43F5E" r="5" stroke="#0A0D14" stroke-width="2"></circle>
+<circle class="animate-pulse" cx="600" cy="252" fill="#F43F5E" r="6" stroke="#ffffff" stroke-width="2"></circle>
+<!-- Day 72 Indicator Line -->
+<line opacity="0.6" stroke="#F43F5E" stroke-dasharray="3 3" stroke-width="1" x1="600" x2="600" y1="30" y2="260"></line>
+<!-- X-Axis Labels -->
+<text fill="#908fa0" font-family="JetBrains Mono" font-size="11" text-anchor="middle" x="60" y="280">Day 0 (Oct 1)</text>
+<text fill="#908fa0" font-family="JetBrains Mono" font-size="11" text-anchor="middle" x="210" y="280">Day 20</text>
+<text fill="#908fa0" font-family="JetBrains Mono" font-size="11" text-anchor="middle" x="360" y="280">Day 40 (Nov 10)</text>
+<text fill="#908fa0" font-family="JetBrains Mono" font-size="11" text-anchor="middle" x="510" y="280">Day 60 (Nov 30)</text>
+<text fill="#F43F5E" font-family="JetBrains Mono" font-size="11" font-weight="600" text-anchor="middle" x="600" y="280">Day 72 (Dec 12)</text>
+<text fill="#908fa0" font-family="JetBrains Mono" font-size="11" text-anchor="end" x="735" y="280">Day 90 (Dec 30)</text>
+</svg>
+<!-- Interactive Tooltip Overlay on Day 72 -->
+<div class="absolute left-[64%] top-[34%] transform -translate-x-1/2 p-space-sm rounded-lg bg-surface-overlay/95 border border-semantic-critical/50 backdrop-blur-xl shadow-[0_8px_24px_rgba(244,63,94,0.3)] pointer-events-none max-w-xs">
+<div class="flex items-center justify-between gap-2 border-b border-border-glass pb-1">
+<span class="font-label-caps text-[10px] text-semantic-critical uppercase font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-semantic-critical"></span>
+                Insolvency Risk Point
+              </span>
+<span class="font-label-metric-md text-[10px] text-on-surface">Day 72</span>
+</div>
+<div class="mt-1 flex flex-col gap-0.5">
+<div class="flex items-baseline justify-between gap-4">
+<span class="font-body-sm text-body-sm text-outline">Projected Cash:</span>
+<span class="font-label-metric-md text-label-metric-md text-semantic-critical font-bold">₹42,180</span>
+</div>
+<div class="flex items-baseline justify-between gap-4">
+<span class="font-body-sm text-body-sm text-outline">Deficit below floor:</span>
+<span class="font-label-metric-md text-[11px] text-semantic-critical">-₹22,820</span>
+</div>
+<div class="font-body-sm text-[10px] text-outline pt-0.5">Statutory vendor &amp; GST challan due date</div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-outline text-body-sm">
+<span class="flex items-center gap-1 text-xs">
+<span class="material-symbols-outlined text-[15px] text-semantic-warning">warning</span>
+            Covenant breach occurs on Day 64 unless trade credit line is activated.
+          </span>
+<span class="font-label-metric-md text-[11px] text-outline">Monte Carlo Confidence: 94.2%</span>
+</div>
+</div>
+<!-- 3. Analytical Synthesis & Underwriter Recommendations -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md">
+<!-- Deterministic Diagnostics Callout (7 cols) -->
+<div class="md:col-span-7 rounded-xl bg-glass-fill border border-border-glass p-space-md backdrop-blur-md flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">psychology</span>
+<h4 class="font-headline-sm text-[16px] text-on-surface font-semibold">What Changed? — Deterministic Diagnostics</h4>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+              Revenue pressure (<span class="text-semantic-critical font-medium">-20%</span>) combined with delayed collections (<span class="text-semantic-warning font-medium">+15d</span>) materially shrinks the operating buffer below the statutory payroll ceiling.
+            </p>
+</div>
+<!-- Granular Driver Pills -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-xs">
+<div class="p-2 rounded-lg bg-surface-container-low border border-border-glass flex flex-col">
+<span class="font-label-caps text-[10px] text-outline uppercase">Liquidity Runway</span>
+<span class="font-label-metric-md text-body-sm text-semantic-critical font-medium">Buffer ↓ 18 days</span>
+<span class="text-[10px] text-outline-variant">Collapses from 24d to 6d runway</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-low border border-border-glass flex flex-col">
+<span class="font-label-caps text-[10px] text-outline uppercase">Default Probability</span>
+<span class="font-label-metric-md text-body-sm text-semantic-critical font-medium">PD ↑ 6.5 pts</span>
+<span class="text-[10px] text-outline-variant">Elevates from 8.2% to 14.7%</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-low border border-border-glass flex flex-col">
+<span class="font-label-caps text-[10px] text-outline uppercase">Liquidity Floor</span>
+<span class="font-label-metric-md text-body-sm text-semantic-critical font-medium">Trough ↓ ₹1.43L</span>
+<span class="text-[10px] text-outline-variant">Touches ₹42K on Dec 12</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-low border border-border-glass flex flex-col">
+<span class="font-label-caps text-[10px] text-outline uppercase">Working Capital Gap</span>
+<span class="font-label-metric-md text-body-sm text-semantic-warning font-medium">Expands +21.4 Days</span>
+<span class="text-[10px] text-outline-variant">Divergence in supplier cycles</span>
+</div>
+</div>
+</div>
+<!-- Underwriter Mitigant Action Card (5 cols) -->
+<div class="md:col-span-5 rounded-xl bg-gradient-to-br from-secondary-container/20 to-surface-container-high/80 border border-secondary/30 p-space-md backdrop-blur-md flex flex-col justify-between gap-space-md shadow-lg">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider font-semibold">Underwriter Mitigant</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface leading-normal">
+<strong class="text-on-surface font-semibold">Recommended Countermeasure:</strong> Secure a <strong>₹8.0L</strong> temporary invoice discounting line against verified TReDS e-invoices to prevent cash trough from breaching the ₹65K covenant threshold.
+            </p>
+</div>
+<div class="flex flex-col gap-2">
+<button class="w-full py-2.5 px-space-md rounded-xl bg-primary text-on-primary font-body-md text-body-md font-semibold flex items-center justify-center gap-2 hover:brightness-105 active:scale-[0.98] transition-all shadow-[0_0_16px_rgba(192,193,255,0.25)]">
+<span>Model Working Capital Line</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+<div class="flex items-center justify-between text-[11px] text-outline px-1">
+<span>Eligible TReDS limit: ₹12.5L</span>
+<span class="text-semantic-success flex items-center gap-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-semantic-success"></span> Pre-approved
+              </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Client-side Script for Micro-Interactions -->
+<script>
+    (function initStressLab() {
+      const sliderRevenue = document.getElementById('sliderRevenue');
+      const sliderDelay = document.getElementById('sliderDelay');
+      const sliderInflation = document.getElementById('sliderInflation');
+      const sliderCapex = document.getElementById('sliderCapex');
+      const sliderChurn = document.getElementById('sliderChurn');
+
+      const valRevenueShock = document.getElementById('valRevenueShock');
+      const valDelay = document.getElementById('valDelay');
+      const valInflation = document.getElementById('valInflation');
+      const valCapex = document.getElementById('valCapex');
+      const valChurn = document.getElementById('valChurn');
+
+      const resetBtn = document.getElementById('resetBtn');
+      const quickResetBtn = document.getElementById('quickResetBtn');
+      const runScenarioBtn = document.getElementById('runScenarioBtn');
+      const presetSelect = document.getElementById('scenarioPreset');
+
+      function updateLabels() {
+        if (sliderRevenue) valRevenueShock.textContent = '-' + sliderRevenue.value + '%';
+        if (sliderDelay) valDelay.textContent = '+' + sliderDelay.value + ' Days';
+        if (sliderInflation) valInflation.textContent = '+' + sliderInflation.value + '%';
+        if (sliderCapex) valCapex.textContent = '+' + sliderCapex.value + '%';
+        if (sliderChurn) valChurn.textContent = sliderChurn.value + '% Volume';
+      }
+
+      function resetBaseline() {
+        if (sliderRevenue) sliderRevenue.value = 10;
+        if (sliderDelay) sliderDelay.value = 7;
+        if (sliderInflation) sliderInflation.value = 5;
+        if (sliderCapex) sliderCapex.value = 0;
+        if (sliderChurn) sliderChurn.value = 0;
+        updateLabels();
+      }
+
+      if (sliderRevenue) sliderRevenue.addEventListener('input', updateLabels);
+      if (sliderDelay) sliderDelay.addEventListener('input', updateLabels);
+      if (sliderInflation) sliderInflation.addEventListener('input', updateLabels);
+      if (sliderCapex) sliderCapex.addEventListener('input', updateLabels);
+      if (sliderChurn) sliderChurn.addEventListener('input', updateLabels);
+
+      if (resetBtn) resetBtn.addEventListener('click', resetBaseline);
+      if (quickResetBtn) quickResetBtn.addEventListener('click', resetBaseline);
+
+      if (runScenarioBtn) {
+        runScenarioBtn.addEventListener('click', function() {
+          const originalHTML = runScenarioBtn.innerHTML;
+          runScenarioBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span><span>Computing Monte Carlo Scenarios...</span>';
+          runScenarioBtn.disabled = true;
+          setTimeout(() => {
+            runScenarioBtn.innerHTML = originalHTML;
+            runScenarioBtn.disabled = false;
+          }, 650);
+        });
+      }
+
+      if (presetSelect) {
+        presetSelect.addEventListener('change', function(e) {
+          const val = e.target.value;
+          if (val.includes('Mild Delayed')) {
+            sliderRevenue.value = 10;
+            sliderDelay.value = 10;
+            sliderInflation.value = 5;
+            sliderCapex.value = 5;
+            sliderChurn.value = 5;
+          } else if (val.includes('Raw Material Price Spike')) {
+            sliderRevenue.value = 15;
+            sliderDelay.value = 12;
+            sliderInflation.value = 25;
+            sliderCapex.value = 10;
+            sliderChurn.value = 10;
+          } else if (val.includes('Tier-1 Client Churn')) {
+            sliderRevenue.value = 35;
+            sliderDelay.value = 25;
+            sliderInflation.value = 8;
+            sliderCapex.value = 20;
+            sliderChurn.value = 60;
+          } else {
+            sliderRevenue.value = 20;
+            sliderDelay.value = 15;
+            sliderInflation.value = 10;
+            sliderCapex.value = 15;
+            sliderChurn.value = 25;
+          }
+          updateLabels();
+        });
+      }
+    })();
+  </script>
+</div></main></div></body></html>

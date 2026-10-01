@@ -150,7 +150,7 @@ export function CashFlowTrendChart() {
               contentStyle={{ backgroundColor: 'rgba(20, 27, 45, 0.95)', borderColor: 'rgba(255,255,255,0.1)', borderRadius: '12px', backdropFilter: 'blur(8px)' }}
               itemStyle={{ fontFamily: 'JetBrains Mono', fontSize: '13px' }}
               labelStyle={{ color: '#c7c4d7', marginBottom: '8px', fontSize: '12px', fontWeight: 600, textTransform: 'uppercase' }}
-              formatter={(value: any, name: string) => {
+              formatter={(value: any, name: any) => {
                 if (name === 'net') return [`+₹${Number(value).toFixed(2)}L`, 'Daily Net Delta'];
                 if (name === 'inflow') return [`+₹${Number(value).toFixed(2)}L`, 'Inflow'];
                 if (name === 'outflow') return [`-₹${Number(value).toFixed(2)}L`, 'Outflow'];

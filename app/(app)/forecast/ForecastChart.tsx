@@ -72,7 +72,7 @@ export function ForecastChart() {
             contentStyle={{ backgroundColor: "#141B2D", borderColor: "rgba(255,255,255,0.1)", borderRadius: 8, fontSize: 12 }}
             itemStyle={{ color: "#fff" }}
             labelStyle={{ color: "#908fa0", marginBottom: 4 }}
-            formatter={(value: any, name: string) => {
+            formatter={(value: any, name: any) => {
               if (Array.isArray(value)) return [`₹${value[0]}K – ₹${value[1]}K`, "90% Confidence"];
               return [`₹${value}K`, name === "historical" ? "Historical" : "Median (p50)"];
             }}
